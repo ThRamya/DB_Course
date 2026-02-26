@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    </body>
+    <script>
+        //XHR stands for XMLHttpRequest.
+        //XMLHttpRequest → eXtensible Markup Language HTTP Request
+        //It’s a JavaScript object used to send and receive data from a server without refreshing the page.
+        //It’s the old way to make asynchronous requests before fetch became popular.
+        // xhr.open(method, url, async) → prepare the request
+        // xhr.onreadystatechange → called whenever the request state changes
+        // xhr.readyState → status of request:
+        // 0 → Uninitialized
+        // 1 → Opened
+        // 2 → Headers received
+        // 3 → Loading
+        // 4 → Done
+        // xhr.status → HTTP status (200 = OK)
+        // xhr.responseText → server response as string
+        // JSON.parse() → convert JSON string → JS object
+        //"GET", "POST", "PUT", "DELETE" should always be written in capital letters.
+        //name is just the key provided in the JSON from the server.
+        var xhr=new XMLHttpRequest(); //create XHR object
+        xhr.open("GET","https://jsonplaceholder.typicode.com/users/1",true);
+        xhr.onreadystatechange=function(){
+           if(xhr.readyState == 4 && xhr.status == 200){
+                console.log("JSON FILE\n",xhr.responseText);//server response as text
+                var data=JSON.parse(xhr.responseText);//converts json string to js object
+                console.log("Name:",data.name);//access data
+           
+            }
+        }
+        xhr.send();
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

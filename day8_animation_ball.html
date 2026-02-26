@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="ball_animation">
+       <style>
+        .outer_layer{
+          width: 490px;
+          height: 393px;
+          border: 3px solid red;
+          position: relative;
+          box-sizing: border-box;
+          overflow: hidden;
+          
+        }
+        .ball{
+            width: 120px;
+            height: 120px;
+            position:absolute;
+            animation: bounce_ball 3s linear infinite;
+
+        }
+        @keyframes bounce_ball {
+            /*left*/   0%{top: 136px; left: -14px;;}
+            /*bottom*/ 25%{top:277px; left: 190px;}  /* 393 - 120 - border */
+            /*right*/  50%{top: 140px; left: 377px;  /* 490 - 120 - border */}
+            /*top*/    75%{top: -10px; left: 185px;}
+            /*back*/   100%{top: 136px; left: -14px;}          
+        }
+       </style> 
+    </head>
+    <body>
+        <div class="outer_layer">
+            <img class="ball" src="image/ball.jpg"  alt="ball">
+        </div>
+    </body>
+</html>

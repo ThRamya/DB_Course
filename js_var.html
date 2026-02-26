@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>/*string*/
+    var firstname="ramya";
+    var lastname='chandra'; 
+    var multi_line_string=`welcome to javascript`;//back tick
+    console.log(multi_line_string);
+    var age=45;
+    const pi=3.14;
+    document.write(age);
+    document.write("<br>");
+    document.write(pi);
+    /*boolean*/
+     var pass=true;
+    var fail=false;
+    /*undefined*/
+    console.log(a);
+    var a;
+    /*null*/
+    var b=null;
+    console.log(b);
+    /*array*/
+    const array1=[45,true,'rajan']; //heterogeneous
+    console.log(array1);
+    /*object*/
+    const obj_name={
+        roll:45,//key and value
+        student_name:"ramya",
+        subject:"maths"
+    }
+    console.log(obj_name);
+    /*object+dot notation (static)*/
+    let person={name:"Ramya"}
+    console.log(person.name);
+    /*object+bracket_notation (dynamic)*/
+    let person1={name:"Radhika"}
+    console.log(person1["name"]);
+    /*string interpolation (${} works only with backticks.)*/
+    let n="Ramya"
+    console.log(`Hello ${n}`);
+
+    let n1=10;
+    console.log(`add n1 value:${n1+n1}`);
+    
+    let msg = `Hello Ramya,
+    Welcome to JavaScript,
+    Happy Learning!`;
+    console.log(msg);
+
+    function greet(){
+        return "Good Morning!!";
+    }
+    console.log(`${greet()}, Ramya`);
+
+    
+    </script>
+</body>
+</html>

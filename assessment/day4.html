@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="day4assessment">
+        <title>CSS learning</title>
+        <link rel="icon" href="../image/favicon.png" type="image/png">
+        <style>
+            /*h1=selector,color=property,white=value,color:white=declaration*/
+            body{
+                background-image:url("image/download.jpg");
+                background-repeat: no-repeat;
+                background-position: right top;
+                margin-right: 200px;
+                background-attachment: fixed;
+                padding-top: 50px;
+                padding-right: 50px;
+                padding-bottom: 50px;
+                padding-left: 50px;
+                
+
+            }
+            div {
+            height: 50px;
+            width: 96%;
+            border: 1px solid #4CAF50;
+            padding: 8px;}
+            p.dotted {border-style: dotted;}
+            p.inset {border-style: inset;}
+            p.outset {border-style: outset;}
+            p.one1 {border-style: solid;border-width: 5px;}
+            p.round {border: 2px solid red; border-radius: 12px;  padding: 5px;}
+            p.double {outline-style: double;}
+            h1{
+                color:yellow;
+                text-align:center;
+            }
+            p{
+                font-family:Times New Roman;
+                font-size:20px;
+           } 
+            #one{
+                text-align:left;
+                color:brown
+            }
+            .class1{
+                text-align:right;
+                color:red;
+            }
+          /*  *{
+                text-align:center;
+                color:pink !important;
+            }
+            h1, p, .box, #one {
+                 color: orange;
+            }*/
+            h3 {
+            text-decoration: underline;
+            }
+            p.capitalize {
+            text-transform: capitalize;}
+            p.a {
+            white-space: nowrap;}
+            p.b {
+            white-space: normal;
+            }
+            p.c {
+            white-space: pre;
+            }
+            .abc:hover{
+                    color:blue;
+            }
+            a:hover {
+            color: hotpink;
+            }
+            ul.a {list-style-type: circle;}
+            ul.b {list-style-type: disc;}
+            ul.c {list-style-type: square;}
+
+            ol.d {list-style-type: upper-roman;}
+            ol.e {list-style-type: lower-roman;}
+            ol.f {list-style-type: lower-alpha;}
+            ol.g {list-style-type: decimal;}
+            h1.bcd{letter-spacing:-1px}
+            p.c { 
+             word-spacing: 1cm;
+            }
+            div.b {
+             text-indent: 30%;
+            }
+            p.rtl {
+             direction: rtl;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <h1 class="abc">Nature</h1>
+        <p>Nature is the breathtaking, interconnected system of all physical things and life, offering beauty, resources, and balance,
+             from vast mountains and oceans to the smallest organisms, providing essential air, water, and food, 
+            yet requiring our protection from harmful human activities to preserve its delicate ecosystems for future generations.</p>
+        <p id="one">Hello World!</p>
+        <p class="class1">World!!</p>
+        <h2 style="color:navy;text-align:center;">Fab!</h2>
+        <h1 style="background-color:Tomato;">Tomato</h1>
+        <h1 style="border: 2px solid DodgerBlue;color:green">Hello World</h1>
+        <p class="dotted" Style="text-align:right">Watch!!</p>
+          <p class="inset" Style="text-align:center">Watch!!</p>
+           <p class="outset" Style="text-align:left">Watch!!</p>
+           <p class="one1" Style="text-align:left">Watch!!</p>
+           <p class="round" Style="text-align:left">Watch!!</p>
+           <h2>CSS height and width properties</h2>
+           <div>This div element has a height of 70 pixels and a width of 100%.</div>
+           <p class="double">A double outline</p>
+           <h3>Meow Meow</h3>    
+           <p class="capitalize">The cat is drinking the milk</p>
+           <h1>The white-space Property</h1>
+           <h2>white-space: nowrap:</h2>
+           <p class="a">
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            </p>
+            <h2>white-space: normal:</h2>
+            <p class="b">
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            </p>
+            <h2>white-space: pre:</h2>
+            <p class="c">
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            meow.meow.meow.meow.
+            </p>
+            <h1 style="text-shadow: 1px 1px 2px red, 2px 2px 4px blue;">Ramya</h1>
+            <p><a href="image/Swimming.jpg" target="_blank">This is a link</a></p>
+            <p>Example of unordered lists:</p>
+            <ul class="a">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ul>
+
+            <ul class="b">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ul>
+
+            <ul class="c">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ul>
+
+            <p>Example of ordered lists:</p>
+            <ol class="d">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ol>
+
+            <ol class="e">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ol>
+
+            <ol class="f">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ol>
+
+            <ol class="g">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ol>
+            <h1 class="bcd">Cute cat</h1>
+            <p class="c">Hello World!</p>
+            <div class="b">Nature is the breathtaking, interconnected system of all physical things and life, offering beauty, resources, and balance,
+             from vast mountains and oceans to the smallest organisms, providing essential air, water, and food, 
+            yet requiring our protection from harmful human activities to preserve its delicate ecosystems for future generations.
+             </div>
+             <p class="rtl">This text goes from right to left.</p>
+ 
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //for...in loop is mainly used to iterate over object properties (keys). It is not recommended for arrays.
+        
+        /****object used in --for in loop--****/
+        const obj = {
+            roll: 45, student_name: "ramya", student_lastname: "chandra",
+            fullName: function () {
+                return this.student_name + " " + this.student_lastname;
+            }
+        }
+        for (let i in obj) {
+            //console.log(i); // to display a key properties
+            //console.log(obj[i]); // to display key values
+            console.log(i + " " + obj[i]); // to display a key properties with key values
+        }
+        console.log(obj.fullName());
+
+        /****array used in --for of loop--****/
+        let array1=[45,"ramya",true,null]
+        for(let i of array1){
+           // console.log(i);// to display a key properties
+           //console.log(array1[i]);// to display key values
+            console.log(i);// to display a key index with key values
+        }
+         let string2="javascript";
+        for(let i in string2){
+            console.log(i);
+        }
+        let string1="java c++ c";
+        for(let i of string1){
+            console.log(i);
+        }
+    </script>
+</head>
+
+<body>
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //repeat() is used to repeat a string multiple times   
+        //basic syntax: string.repeat(number) 
+        let text = "Hi ";
+        console.log(text.repeat(3));
+
+        let star = "*";
+        console.log(star.repeat(5));
+
+        let name = "Ramya ";
+        let result = name.repeat(2);
+        console.log(result);
+
+        console.log("A".repeat(4));
+
+        //Symbol is a unique value
+        //Even if same name → symbols are different.
+        //Used to create unique object keys
+
+        let s1 = Symbol("id");
+        let s2 = Symbol("id");
+        console.log(s1 === s2);
+
+        let id = Symbol("id");
+
+        let user = {
+            name: "Ramya",
+            [id]: 101
+        };
+        console.log(user.name);
+        console.log(user[id]);
+
+    </script>
+</body>
+
+</html>

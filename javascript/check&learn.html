@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #msg {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<form id="form1">
+
+    <div>
+        <label>First Name:</label><br>
+        <input type="text" id="fname">
+        <p id="msg"></p>
+    </div>
+
+    <br>
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+
+document.getElementById("form1").addEventListener("submit", function(e){
+
+    let f_name = document.getElementById("fname").value.trim();
+    let message = document.getElementById("msg");
+
+    // Clear previous message
+    message.innerText = "";
+
+    if (f_name === "") {
+        message.innerText = "Please enter name";
+        message.style.color = "red";
+        e.preventDefault();
+    }
+    else if (f_name.length < 3 || f_name.length > 20) {
+        message.innerText = "Name must be 3 to 20 characters";
+        message.style.color = "red";
+        e.preventDefault();
+    }
+    else {
+        message.innerText = "Valid name ✅";
+        message.style.color = "green";
+        e.preventDefault(); // remove this if you want form to actually submit
+    }
+
+});
+
+</script>
+
+</body>
+</html>

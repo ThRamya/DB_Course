@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        array1 = [45, 67,89,"ramya", "chandra"]; 
+    //     console.log(array1);
+    //     array1.push("56"); //insert the value last, push()-nothing will display,push(" ")-->" " is displayed
+    //     console.log(array1);
+    //     array1.push("76");
+    //     console.log(array1);
+    //    // array1.pop();//end of the value removed
+    //    // console.log(array1);
+    //     array1.shift(); //start of the value removed
+    //     console.log(array1);
+    //     array1.unshift(45,"radhika"); //
+    //      console.log(array1);//starting it include their values
+       
+    //     array1.splice(2,0,"56");// 2-->2nd position,0 -- it won't del values 56 is come to 2nd position
+    //    console.log(array1);
+    //     array1.splice(2,2,"rajan");//2--> 2nd position,2-->after the 2nd position it remove the 2 values and inserted  the value with rajan name
+    //     console.log(array1);
+       array1 = [45, 67,89,"ramya", "chandra"]; 
+        let array2=array1.slice(1,3);//slice(1,3)-->slice(start,end)indices, end won't display only from start and before end
+        console.log("array2:",array2);//slice():Does NOT change original array,Returns a new array
+        console.log("array1:",array1);
+        let brray=array1.slice(2);//slice(2) is a starting indices to end
+        console.log("brray:",brray);
+         let brray1=array1.slice(-2);//slice(-2) is a starting indices to end (assing a value from last like -1,-2,-3,-4,-5 ,here last indices is -1(!imp))
+        console.log("brray1",brray1); 
+        //    let brray2=array1.slice();// it will display everything inside array like normal array;
+        //     console.log(brray2);
+         array3=[1,24,5,41,15];
+        // console.log(array3.sort());//sort like [1, 15, 24, 41, 5]
+        // console.log(array3.reverse());//reverse like  [5, 41, 24, 15, 1] (!IMP reverse doing normal reverse nothing special)
+        // brray4=["cat","dog","bat","%","Net","apple","Ant",78,"*","ANT","!","ciipT","@",":"];
+        // console.log(brray4.sort());// [78, 'Ant', 'Net', 'apple', 'bat', 'cat', 'dog'] (!IMP symbol 1st(we need to know the symbol order for ascend it) ,number 2st,whole capital letter 3nd,capital letter is 4th, small letter last is last)
+        array4=['dog', 'cat', 'bat', 'hai', 'hai', 'Ant', 78]
+        // console.log(array4.reverse());//['dog', 'cat', 'bat', 'apple', 'Net', 'Ant', 78]
+        // console.log(array4.fill("hai",3,6));//['dog', 'cat', 'bat', 'hai', 'hai', 'Ant', 78],we need to add value what we going to replace use before in fill and then give start,end;
+        // console.log(array4.join("-"));//dog-cat-bat-hai-hai-Ant-78
+        // console.log(array4.toString());//dog,cat,bat,hai,hai,Ant,78
+        
+        // let array5=array3.concat(array4);
+        // console.log(array5);//(12) [5, 41, 24, 15, 1, 'dog', 'cat', 'bat', 'hai', 'hai', 'Ant', 78]
+        // console.log(array5.indexOf('hai'));//8
+        // console.log(array5.includes(23));//false
+        // console.log(array5.includes(5));//true
+        // for(let j=0;j<array5.length;j++){
+        //     if(array5[j]=="hai"){
+        //         console.log("true");//2 true
+        //     }
+        // }
+
+         //var total=0;
+        // array3.forEach(funcall);
+        // function funcall(value){
+        //     total+=value;
+        // }
+        // console.log(total);
+        /*** map function**/
+        // let tot=array3.map(funcall);
+        // function funcall(value){
+        //     return value*10;
+        // }
+        // for (let j of tot){
+        //     console.log(j)
+        // }
+        /**filter**/
+        // let tot1=array3.filter(fncall);
+        // function fncall(value){
+        //     return value>20;
+        // }
+        // for (let j of tot1){
+        //     console.log(j)
+        // }
+        /*reduce*/
+        //  let tot2=array3.reduce(fcall);
+        // function fcall(sum,value){
+        //     return value+=20;
+        // } 
+        // console.log(tot2);
+        // let array_key=array3.keys()
+        // console.log(array_key);
+        // for(let j of array_key)
+        // {
+        //     console.log("value"+j);
+        // }
+        // const obj={
+        //     student_name:"ramya"
+        // }
+
+        array7=["ramya","arthi","priya"]; //priya= -3,arthi=-2 ramya=-1
+  console.log(array7.at(1)); //Gets the value at a specific index , at() supports negative indexing
+        
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

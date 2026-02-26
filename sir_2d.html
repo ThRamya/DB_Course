@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+.orginal{
+           width:200px;
+        height:100px;
+      background-color: rgb(0, 255, 76);
+        
+}
+.orginal img{
+        width:200px;
+        height:100px;
+     
+        transition: all 2s ;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0.3s;
+    }
+    .orginal img:hover{
+        width: 300px;
+        height:200px;
+        background-color: red;    
+        border: 5px solid blue;
+        transform: rotate(5deg);
+    }
+     .modified_scale{
+        width:200px;
+        height:100px;
+ /*        background-color: rgb(76, 0, 255);
+  */       position: relative;
+        top:200px;
+        transform: scale(2,2);/* scaleX(.5),scaleY(2), scale3D(1.5,1.5,2)*/
+
+    }
+    
+.modified_translate{
+    width: 200px;
+    height: 100px;
+  /* background-color: rgb(76, 0, 255);
+     background-color: rgb(76, 0, 255);
+     */ 
+     position: fixed;
+    top: 0px;
+    transform: translate(258px, 100px);/*  translateX(100px);translateY(100px);*/
+
+    }
+.modified_rotate{
+    width: 100px;
+    height: 100px;
+/*      background-color: rgb(255, 128, 0); 
+ */    position: fixed;
+    top: 0px;
+    left:450px;
+    transform:rotate(4deg);/*  rotateX(50deg);rotateY(45deg); rotate(45deg); rotate3D(2,1,1,45deg) */
+}
+.modified_skew{
+    width: 100px;
+    height: 100px;
+   /*  background-color: rgb(255, 128, 0); */
+    position: fixed;
+    top: 300px;
+    left:450px;
+    transform:skewX(4deg);/*  skew(50deg);skewY(45deg); rotate(45deg); rotate3D(2,1,1,45deg) */
+}
+ 
+</style>
+</head>
+
+<body>
+    <div class="orginal">
+         <img src="msd1.jpg" />
+ 
+
+    </div>
+    <div class="modified_scale">
+
+    </div>
+        <div class="modified_translate">
+
+    </div>
+      <div class="modified_rotate">
+
+    </div>
+          <div class="modified_skew">
+
+    </div>
+</body>
+</html>

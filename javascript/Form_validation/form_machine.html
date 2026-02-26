@@ -1,0 +1,91 @@
+
+<form id="myForm">
+
+  <label>Name:</label>
+  <input type="text" id="name">
+  <span id="nameError"></span>
+  <br><br>
+
+  <label>Email:</label>
+  <input type="text" id="email">
+  <span id="emailError"></span>
+  <br><br>
+
+  <label>Password:</label>
+  <input type="password" id="password">
+  <span id="passwordError"></span>
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+</form>
+
+<script>
+
+let form = document.getElementById("myForm");
+let nameInput = document.getElementById("name");
+let emailInput = document.getElementById("email");
+let passwordInput = document.getElementById("password");
+
+
+// 🔹 NAME - Dynamic validation
+nameInput.addEventListener("input", function() {
+
+    if (this.value.trim() === "") {
+        document.getElementById("nameError").innerText = "Name is required";
+    } else {
+        document.getElementById("nameError").innerText = "";
+    }
+
+});
+
+
+// 🔹 EMAIL - Dynamic validation
+emailInput.addEventListener("input", function() {
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (this.value.trim() === "") {
+        document.getElementById("emailError").innerText = "Email is required";
+    }
+    else if (!this.value.match(emailPattern)) {
+        document.getElementById("emailError").innerText = "Enter valid email";
+    }
+    else {
+        document.getElementById("emailError").innerText = "";
+    }
+
+});
+
+
+// 🔹 PASSWORD - Dynamic validation
+passwordInput.addEventListener("input", function() {
+
+    if (this.value.length < 6) {
+        document.getElementById("passwordError").innerText = "Minimum 6 characters";
+    } else {
+        document.getElementById("passwordError").innerText = "";
+    }
+
+});
+
+
+// 🔹 STATIC VALIDATION (Final Check)
+form.addEventListener("submit", function(e) {
+
+    e.preventDefault(); // stop refresh
+
+    if (
+        nameInput.value.trim() === "" ||
+        emailInput.value.trim() === "" ||
+        passwordInput.value.length < 6
+    ) {
+        alert("Please fix errors before submitting");
+    }
+    else {
+        alert("Form Submitted Successfully ✅");
+    }
+
+});
+
+</script>

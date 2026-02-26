@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <p class="item">One</p>
+    <p class="item">Two</p>
+    <p class="item">Three</p>
+    <div class="tag_item">Four</div>
+    <div class="tag">five</div>
+    <h1 class="demo">Ramya</h1>
+    <h2 class="demo">Chandra</h2>
+    <h3 class="demo">Mariappan</h3>
+ 
+     <script>
+        /*getElementsByClassName*/
+        let l=document.getElementsByClassName("item"); //getElementsByClassName-->returns a live(update automatically) HTML collection
+        console.log(l); //HTMLcollection(3)
+        console.log(l[0]); //first <p>
+        l[2].innerText="Ramya"; //update a changes you need to do
+        console.log(l.length);
+        document.body.innerHTML += '<p class="item">New</p>';
+        console.log(l.length);
+        /*getElementsByTagName()*/
+        let l1=document.getElementsByTagName("div");
+        console.log(l1);
+        console.log(l1[1]);//second div
+        let c= document.getElementsByTagName("p");
+        for(let i=0;i<c.length;i++)
+        {
+            c[i].style.color="red";
+        }
+        /*querySelector() = first match only*/
+        let firstpara=document.querySelector("p");
+        firstpara.style.color="blue"; //firstpara is object,style is object,color is property,blue is value
+        document.querySelector("p");
+        /*querySelectorAll()*/
+        let nodeList=document.querySelectorAll(".demo")
+        for(let i=0;i<nodeList.length;i++)
+        {
+            nodeList[i].style.backgroundColor="yellow";
+        }
+        let a=document.querySelectorAll("div.tag");
+        a[0].style.backgroundColor="pink";
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    </head>
+   <body>
+    <table>
+    <tr>
+        <th>Day</th>
+        <th>9:00 - 10:00</th>
+        <th>10:00 - 11:00</th>
+        <th>11:00 - 12:00</th>
+        <th>12:00 - 1:00</th>
+        <th>1:00 - 2:00</th>
+    </tr>
+
+    <tr>
+        <th>Monday</th>
+        <td>Math</td>
+        <td>Physics</td>
+        <td rowspan="3">Lab</td>
+        <td rowspan="5">Lunch</td>
+        <td>English</td>
+    </tr>
+
+    <tr>
+        <th>Tuesday</th>
+        <td>Biology</td>
+        <td>Chemistry</td>
+        <td>Computer</td>
+    </tr>
+
+    <tr>
+        <th>Wednesday</th>
+        <td colspan="2">Seminar</td>
+        <td>Math</td>
+    </tr>
+
+    <tr>
+        <th>Thursday</th>
+        <td>Physics</td>
+        <td>Math</td>
+        <td>English</td>
+        <td>Biology</td>
+    </tr>
+
+    <tr>
+        <th>Friday</th>
+        <td colspan="3">Project Work</td>
+        <td>Sports</td>
+    </tr>
+</table>
+<p>Gender:</p>
+
+<input type="radio" id="male" name="gender" >
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+   </body> 
+
+    
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mask Image Example</title>
+<style>
+  .mask-img {
+    width: 300px;
+    height: 300px;
+    /* Background image you want to show */
+    background: url('your-image.jpg') center/cover no-repeat;
+
+    /* Apply mask */
+    -webkit-mask-image: url('mask-shape.png'); /* Mask image */
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
+
+    /* For standard CSS (Firefox/Edge) */
+    mask-image: url('mask-shape.png');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="mask-img"></div>
+
+</body>
+</html>

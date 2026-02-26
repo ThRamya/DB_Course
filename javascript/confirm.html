@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body{
+            font-family: Arial;
+        }
+        .error{
+            color: red;
+        }
+        .success{
+            color: green;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="regForm">
+    <label>Username:</label><br>
+    <input type="text" id="username"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password"><br><br>
+
+    <label>Confirm Password:</label><br>
+    <input type="password" id="confirmPassword"><br><br>
+
+    <h4>Password must contain:</h4>
+    <ul>
+        <li id="length" class="error">✔ At least 8 characters</li>
+        <li id="upper" class="error">✔ One uppercase letter</li>
+        <li id="lower" class="error">✔ One lowercase letter</li>
+        <li id="number" class="error">✔ One number</li>
+        <li id="special" class="error">✔ One special character</li>
+    </ul>
+
+    <button type="submit">Register</button>
+</form>
+
+<script>
+let password = document.getElementById("password");
+
+password.addEventListener("keyup", function(){
+
+    let value = password.value;
+
+    // Length
+    if(value.length >= 8){
+        document.getElementById("length").classList.remove("error");
+        document.getElementById("length").classList.add("success");
+    } else {
+        document.getElementById("length").classList.remove("success");
+        document.getElementById("length").classList.add("error");
+    }
+
+    // Uppercase
+    if(/[A-Z]/.test(value)){
+        document.getElementById("upper").classList.remove("error");
+        document.getElementById("upper").classList.add("success");
+    } else {
+        document.getElementById("upper").classList.remove("success");
+        document.getElementById("upper").classList.add("error");
+    }
+
+    // Lowercase
+    if(/[a-z]/.test(value)){
+        document.getElementById("lower").classList.remove("error");
+        document.getElementById("lower").classList.add("success");
+    } else {
+        document.getElementById("lower").classList.remove("success");
+        document.getElementById("lower").classList.add("error");
+    }
+
+    // Number
+    if(/[0-9]/.test(value)){
+        document.getElementById("number").classList.remove("error");
+        document.getElementById("number").classList.add("success");
+    } else {
+        document.getElementById("number").classList.remove("success");
+        document.getElementById("number").classList.add("error");
+    }
+
+    // Special Character
+    if(/[@$!%*?&]/.test(value)){
+        document.getElementById("special").classList.remove("error");
+        document.getElementById("special").classList.add("success");
+    } else {
+        document.getElementById("special").classList.remove("success");
+        document.getElementById("special").classList.add("error");
+    }
+});
+
+
+// Confirm Password Validation
+document.getElementById("regForm").addEventListener("submit", function(e){
+
+    let pass = document.getElementById("password").value;
+    let confirmPass = document.getElementById("confirmPassword").value;
+
+    if(pass !== confirmPass){
+        alert("Passwords do not match!");
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>

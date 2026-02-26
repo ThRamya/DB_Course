@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mountain Climbing Animation</title>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: skyblue;
+}
+
+/* Mountain */
+.mountain {
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 300px solid #5c4033;
+    position: relative;
+}
+
+/* Snow peak */
+.mountain::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -60px;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 80px solid white;
+}
+
+/* Climber */
+.climber {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    animation: climb 4s linear infinite;
+}
+
+/* Animation */
+@keyframes climb {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(150px, -250px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="mountain">
+    <div class="climber"></div>
+</div>
+
+</body>
+</html>

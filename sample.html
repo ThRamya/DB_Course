@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Practice</title><style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Hero */
+.hero {
+  height: 300px;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid Section */
+.courses {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.course-card {
+  position: relative;
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Absolute Badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: crimson;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* Button */
+button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+/* Fixed Chat */
+.chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+/* Tooltip */
+.tooltip-box {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  background: black;
+  color: white;
+  padding: 5px;
+  visibility: hidden;
+}
+
+.tooltip-box:hover .tooltip {
+  visibility: visible;
+}
+</style>
+    </head>
+    <body>
+     
+
+<!-- Sticky Navbar -->
+<nav class="navbar">
+  <span class="logo">EduPro</span>
+  <ul class="menu">
+    <li>Home</li>
+    <li>Courses</li>
+    <li>Profile</li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Learn CSS Like a Pro</h1>
+  <p>Advanced layouts using real projects</p>
+</section>
+
+<!-- Course Grid -->
+<section class="courses">
+  <div class="course-card">
+    <span class="badge">NEW</span>
+    <h3>HTML Mastery</h3>
+    <button>Enroll</button>
+  </div>
+
+  <div class="course-card">
+    <span class="badge">HOT</span>
+    <h3>CSS Advanced</h3>
+    <button>Enroll</button>
+  </div>
+
+  <div class="course-card">
+    <span class="badge">PRO</span>
+    <h3>Flex & Grid</h3>
+    <button>Enroll</button>
+  </div>
+</section>
+
+<!-- Fixed Chat Button -->
+<div class="chat-btn">💬</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <span>© 2026 EduPro</span>
+  <span class="tooltip-box">
+    Help
+    <span class="tooltip">Contact support</span>
+  </span>
+</footer>
+
+</body>
+</html>
+
+        
+    </body>
+</html>

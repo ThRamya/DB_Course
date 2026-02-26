@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function gettata(cal) {
+    return(new Promise((resolve,reject)=>{
+ let a=45;
+    let b="45";
+    if(a===b){
+        resolve("log")
+    }
+    else{
+        reject("error")
+    }
+   }))
+   }
+
+
+function getData(result) {
+  console.log(result);
+};
+gettata().then((result)=>console.log(result)).catch((er)=>{console.log(er)})
+getData("welcome")
+console.log("hello")
+    </script>
+</body>
+</html>

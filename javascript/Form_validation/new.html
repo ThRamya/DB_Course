@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Events Form</title>
+  <style>
+    span { color: red; font-size: 14px; }
+    input, select { display: block; margin-bottom: 10px; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>Complete Validation Form</h2>
+
+<form id="mainForm">
+
+  Name:
+  <input type="text" id="name" required>
+  <span id="nameError"></span>
+
+  Email:
+  <input type="text" id="email">
+  <span id="emailError"></span>
+
+  Password:
+  <input type="password" id="password">
+  <span id="passError"></span>
+
+  Phone:
+  <input type="text" id="phone">
+  <span id="phoneError"></span>
+
+  Gender:
+  <select id="gender">
+    <option value="">Select</option>
+    <option>Male</option>
+    <option>Female</option>
+  </select>
+  <span id="genderError"></span>
+
+  <br>
+  <button type="submit" id="submitBtn">Submit</button>
+  <button type="reset">Reset</button>
+
+</form>
+
+<script>
+
+let form = document.getElementById("mainForm");
+let nameInput = document.getElementById("name");
+let emailInput = document.getElementById("email");
+let passInput = document.getElementById("password");
+let phoneInput = document.getElementById("phone");
+let genderInput = document.getElementById("gender");
+let submitBtn = document.getElementById("submitBtn");
+
+
+// 1 focus
+nameInput.addEventListener("focus", function() {
+  this.style.backgroundColor = "lightyellow";
+});
+
+// 2 blur
+nameInput.addEventListener("blur", function() {
+  if (this.value === "") {
+    document.getElementById("nameError").innerText = "Name required";
+  } else {
+    document.getElementById("nameError").innerText = "";
+  }
+  this.style.backgroundColor = "white";
+});
+
+// 3 input
+emailInput.addEventListener("input", function() {
+  if (!this.value.includes("@")) {
+    document.getElementById("emailError").innerText = "Invalid Email";
+  } else {
+    document.getElementById("emailError").innerText = "";
+  }
+});
+
+// 4 change
+genderInput.addEventListener("change", function() {
+  if (this.value === "") {
+    document.getElementById("genderError").innerText = "Select gender";
+  } else {
+    document.getElementById("genderError").innerText = "";
+  }
+});
+
+// 5 click
+submitBtn.addEventListener("click", function() {
+  console.log("Button clicked");
+});
+
+// 6 submit
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  if (passInput.value.length < 6) {
+    document.getElementById("passError").innerText =
+      "Password min 6 chars";
+  } else {
+    document.getElementById("passError").innerText = "";
+    alert("Form Submitted!");
+  }
+});
+
+// 7 keyup
+passInput.addEventListener("keyup", function() {
+  console.log("Key released");
+});
+
+// 8 keydown
+passInput.addEventListener("keydown", function() {
+  console.log("Key pressed");
+});
+
+// 9 mouseover
+submitBtn.addEventListener("mouseover", function() {
+  this.style.backgroundColor = "lightgreen";
+});
+
+// 10 mouseout
+submitBtn.addEventListener("mouseout", function() {
+  this.style.backgroundColor = "";
+});
+
+// 11 dblclick
+nameInput.addEventListener("dblclick", function() {
+  alert("Double Clicked Name!");
+});
+
+// 12 contextmenu
+nameInput.addEventListener("contextmenu", function(e) {
+  e.preventDefault();
+  alert("Right click disabled");
+});
+
+// 13 focusin
+emailInput.addEventListener("focusin", function() {
+  console.log("Focus entered email");
+});
+
+// 14 focusout
+emailInput.addEventListener("focusout", function() {
+  console.log("Focus left email");
+});
+
+// 15 invalid
+nameInput.addEventListener("invalid", function() {
+  document.getElementById("nameError").innerText =
+    "This field is required!";
+});
+
+// 16 reset
+form.addEventListener("reset", function() {
+  alert("Form Reset!");
+});
+
+// 17 paste
+phoneInput.addEventListener("paste", function() {
+  alert("Paste not allowed");
+});
+
+// 18 cut
+phoneInput.addEventListener("cut", function() {
+  alert("Cut detected");
+});
+
+// 19 copy
+phoneInput.addEventListener("copy", function() {
+  alert("Copy detected");
+});
+
+// 20 select
+nameInput.addEventListener("select", function() {
+  alert("Text selected in Name");
+});
+
+</script>
+
+</body>
+</html>

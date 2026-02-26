@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sec_h{
+            text-align: center;
+        }
+      .section-container{
+        display:flex;
+        flex-wrap: wrap;
+      }
+      .img_holders{
+        width:21%;
+        padding:2%;
+
+      }
+      
+      .img_holders img{
+        width:100%;
+      }
+      @media screen and (min-width:992px) and (max-width:1200px)
+      {
+        .img_holders{
+            width: 29%;
+            box-shadow: 1px 2px 2px 2px red;
+         }
+         h2{
+            color:aqua;
+         }
+         
+      }
+      @media screen and (min-width:768px) and (max-width:991px)
+      {
+        .img_holders{
+            width: 45%;
+            margin:1%;
+            box-shadow: 1px 2px 2px 2px yellow;
+         }
+         h2{
+            color:pink;
+         }
+         .img_holders{
+            filter:invert();}
+            .sec_h{
+            display:none;
+         }
+         
+         
+      }
+    @media  screen and (min-width:560px) and (max-width:760px){
+   .img_holders{
+    width: 95%;
+   }
+   .img_holders img{
+    clip-path: circle();
+   }
+    
+        
+    }
+    .imh_h{
+        height:300px;
+        width:300px;
+        background-image: url("image/kan.jpg");
+      }
+    @media screen and (min-resolution:2dppx)
+       {
+        .imh_h{
+            background-image: url("image/bhag.jpg");
+            
+        }
+       }
+    </style>
+</head>
+<body>
+     <div class="img-h">
+
+    </div>
+    <section>
+        <h1 class="sec_h">section header</h1>
+        <div class="section-container" >
+        <div class="img_holders">
+        <img src="image/Bhagyashree.jpg">
+        <h2>col1</h2></div>
+        <div class="img_holders">
+        <img src="image/Bhagyashree.jpg">
+        <h2>col2</h2></div>
+        <div class="img_holders">
+        <img src="image/Bhagyashree.jpg">
+        <h2>col3</h2></div>
+        <div class="img_holders">
+        <img src="image/Bhagyashree.jpg">
+        <h2>col4</h2>
+        </div>
+        </div>
+    </section>
+   
+    
+</body>
+</html>

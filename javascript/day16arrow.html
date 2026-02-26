@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        let array2=[90,78,89];
+
+       
+        let array1=array2.map(function(v){
+            return v*10;
+        })
+        console.log(array1);
+        let array3=array2.map((v)=>{return v*10});
+              console.log(array3);
+              let obj=[{name:"ramya",age:28},{
+                name:"radhika",age:31
+              }]
+              let oj_name=obj.map((v)=>v.name+" "+v.age)
+              console.log(oj_name);
+    </script>
+</body>
+</html>

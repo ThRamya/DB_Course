@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Implicit automatic type conversion function
+        let a="45";
+        let b=3;
+        console.log(typeof(b));
+        b*=a;
+        console.log(typeof(b));
+        console.log(b);
+        //Explicit manual  Number(),String(),toString,parseInt()
+
+        /* String(val) it convert everything into string 
+          val.toString() it convert everything into string except null/undefined*/
+        
+        let var1=45;
+        let bool=true;
+        String(45);
+        console.log(typeof(String(45)));
+        let var11=var1.toString();
+        console.log(var11);
+        console.log(typeof(var11));
+         let var3="Ramya";
+         var4=Number(var3);
+         console.log("var3",typeof(var4)); 
+         //here typeof show number,but value will show NaN
+         console.log("value of var4:",var4); 
+         console.log(Number([1,2,3]), typeof Number([1,2,3]));
+
+    
+    
+    </script>
+</body>
+</html>
+<!--let n = null;
+    let strN = n.toString();   // ❌ TypeError
+    Console.log(strN);//Uncaught ReferenceError ReferenceError: type is not defined
+ -->

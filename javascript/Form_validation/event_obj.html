@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body1">
+    <button id="btn">click here</button>
+    <button id="btn1">click me</button>
+    <input type="text" id="int">
+    <div id="div1" style="width:200px;height:100px;background-color: aqua;">
+        <p id="para"></p>
+    </div>
+   
+    <script>
+        document.getElementById("body1").addEventListener("keyup",function onch(e){
+        // console.log(e);
+        //  console.log(e.key);
+        // alert("hai");
+        console.log(e);
+        // e.preventDefault();
+        //  document.getElementById("para").innerText=e.target.value;
+          // document.getElementById("para").innerText+=e.key;
+        });
+        document.getElementById("int").addEventListener("keydown",function onch(e){
+        // console.log(e);
+        //  console.log(e.key);
+        // alert("hai");
+        console.log(e);
+        e.preventDefault();
+        //  document.getElementById("para").innerText=e.target.value;
+          // document.getElementById("para").innerText+=e.key;
+        });
+        let button1=document.getElementById("btn");
+        button1.addEventListener("click",function clicked(eo){
+            alert("Hi, I tried eventobject today");
+            console.log("Hi Everyone!!");
+           console.log(eo.target); //target used to show which element is used to performed
+           console.log(eo.target.textContent);
+           console.log(eo.offsetX+" "+eo.offsetY); 
+         
+        
+        })
+    </script>
+</body>
+</html>

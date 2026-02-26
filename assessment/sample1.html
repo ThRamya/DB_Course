@@ -1,0 +1,72 @@
+<style>
+    /* Responsive design for mobile screens */
+@media screen and (max-width: 768px) {
+    
+    /* Nav menu stack vertically */
+    nav ul {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Hero text smaller */
+    .hero .head {
+        font-size: 28px;
+    }
+
+    .hero .para {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    /* Event feature boxes stack vertically */
+    .event {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div1 {
+        width: 90%;      /* fit mobile width */
+        margin: 20px 0;
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    /* Gallery grid becomes 1 column */
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .img1 {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    /* Table adjusts */
+    table, th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Register button smaller */
+    .btn {
+        padding: 15px;
+        font-size: medium;
+    }
+
+    /* Help button smaller */
+    .btn1 {
+        width: 35px;
+        height: 35px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+</style>

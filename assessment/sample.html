@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Example</title>
+    <style>
+        /* Remove default list styling and margin/padding */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Background color */
+            overflow: hidden;
+        }
+
+        /* Make list items horizontal */
+        nav ul li {
+            display: inline-block;
+        }
+
+        /* Link styling */
+        nav ul li a {
+            display: block;
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline */
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            padding: 15px 25px; /* Padding around text */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+        /* Hover effect */
+        nav ul li a:hover {
+            background-color: #555; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

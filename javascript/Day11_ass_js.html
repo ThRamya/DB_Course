@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="js_assignment">
+        <title>JScript</title>
+        
+    </head>
+    <body>
+        <button onclick="r()">Click me</button>
+        <p id="msg">Welcome Everybody</p>
+        <button onclick="changeText()">Change text</button>
+        <p id="msg1">Hai</p>
+        <button onclick="changeEffects()">change effects</button>
+        <button onclick="hideText()">Hide</button>
+        <button onclick="seeText()">see</button>
+        <button id="btn">Try me</button>
+        <button id="tap">Date and time</button>
+        <button id="taptap">give color</button>
+        <p id="msg3">0</p>
+        <button id="tap1">Increase</button>
+<script>
+    let name="Ramya";
+    console.log("Hello " +name);
+    function r(){
+        alert("Hello JavaScript");
+    }
+    let age=26;
+    let city="Chennai";
+    console.log(age,city);
+    let a=20;
+    let b=10;
+    console.log(a+b);
+    function changeText(){
+        document.getElementById("msg").innerText="Hello Javascript"; 
+
+    }
+    function changeEffects(){
+        document.getElementById("msg1").innerHTML="<b>Hi!! Ramya</b>";
+        document.getElementById("msg1").style.color="red";
+    }
+    function hideText(){
+        document.getElementById('msg1').style.display="none";
+    }
+    function seeText(){
+        document.getElementById('msg1').style.display="block";
+    }
+    document.getElementById("btn").addEventListener("click",function(){
+        document.getElementById("msg1").innerHTML="<i>I used addEventListener instead of onclick</i>";
+    })
+    document.getElementById("tap").addEventListener("click",function(){
+        document.getElementById('msg1').innerHTML=Date();
+    })
+    document.getElementById("taptap").addEventListener("click",function(){
+        document.body.style.backgroundColor="lightblue"; /*document.body → object,style.backgroundColor → property*/
+    })
+    let count=0;
+    document.getElementById('tap1').addEventListener("click",function(){
+        count++;
+        document.getElementById("msg3").innerText=count;
+    })
+    
+</script>
+    </body>
+   
+</html>

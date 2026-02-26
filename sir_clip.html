@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         img{
+       width: 300px ;
+       height:215px;
+       object-fit: cover;
+       object-position: 50% 65%;
+    }
+    p{
+        display: inline-block;
+        width: 48%;
+        padding-left: 2%;
+    }
+    .img_holder{
+        display: flex;
+
+            box-shadow: 0px 0px 3px 1px #c7c3c3;
+    padding-left: 2%;
+        justify-content: space-between;
+        justify-items: center;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+            padding: 3% 2%;
+   /*  background-color: #edecec;
+    */ }
+    .items{
+
+          width: 29%;
+    /* padding: 1%; */
+    margin: 0% 2%;
+    background-color: white;
+      box-shadow: 0px 0px 8px 1px #dcd8d8;
+    }
+    .img_hold img{
+        width: 100%;
+        clip-path: circle(50%);
+        clip-path: circle(50% at left);
+        clip-path:ellipse(50% 30% at right);
+        clip-path: polygon(50% 0%,100% 50%,50% 100%, 50% 0%);
+    filter: blur(2px);
+    filter: brightness(87%) contrast(141%);
+    filter: contrast(119%); 
+    filter: drop-shadow(2px 4px 6px black);
+    filter: grayscale(5);
+    filter: hue-rotate(358deg);
+    filter: saturate(6.5);
+    filter: sepia(6);
+    filter: invert(1);
+    }
+    .img_hold{
+        max-height: 200px;
+
+    }
+    .content_hold{
+        min-height: 200px;
+    }
+    .img_posi{
+        object-position: 50% 15%;
+    }
+    .logo{
+        mask-image: url("LOGO-removebg-preview.png") ;
+        mask-repeat: no-repeat;
+ 
+    }
+    </style>
+</head>
+<body>
+     <section class="container">
+        <div class="items">
+            <div class="img_hold">
+                <img src="msd1.jpg" >
+            </div>
+            <div class="content_hold">
+                <p>
+                    MS Dhone
+                </p>
+
+            </div>
+        </div>
+        <div class="items">
+            <div class="img_hold ">    
+                   <img class="img_posi" src="uv.jpg" >
+            </div>
+            <div class="content_hold">
+                <p> virat</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="img_hold">
+                <img src="virat.jpg" >
+            </div>
+            <div class="content_hold">
+                <p> Yvaraj</p>
+            </div>
+        </div>
+    </section>
+      <div class="img_holder">
+        <img src="../image/banner2-1-1024x512.jpg" />
+        <p class="first_para">  started by students of BITS Pilani in 2005. We work in the areas of Education, Skill Development &amp; Entrepreneurship, Health an started by students of BITS Pilani in 2005. We work in the areas of Education, Skill Development &amp; Entrepreneurship, Health and Wellbeing, Community Development and Social Leadership. In the past 16 years of journey, we have impacted the lives of 1.5+ million beneficiaries with the support of 300+ full time employees and 1000+ strong volunteer network, through various impact-oriented Flagship Programs &amp; Social Leadership Initiatives benefiting Children, Women, Youth, Persons with Disabilities (PwDs), LGBTQ+ and Farmers from diverse social backgrounds across 15 States of India while partnering with 100+ Corporate, Government and Philanthropic partners.</p>  
+   
+    </div>
+    <img class="logo" src="../image/banner2-1-1024x512.jpg" width="600px" height="500px"/>
+    <div class="i">
+
+    </div>
+</body>
+</html>

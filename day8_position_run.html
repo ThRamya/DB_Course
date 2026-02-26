@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:100vh; /*vh = viewport height,100vh = 100% of screen height*/
+            position: relative; 
+            overflow: hidden;
+            margin:0;
+        }
+        .runner{
+            width:250px;
+            height:400px;
+            position:absolute;  
+            bottom:0;
+            left:-250px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: /*runFrames → controls image/frame change,moveRunner → controls position movement*/
+            runframes 1s steps(1) infinite,
+            moveRunner 6s linear infinite;
+        }
+        @keyframes runframes{
+            0%{background-image:url("image/boy1.jpg");}
+            20%{background-image:url("image/boy2.jpg");}
+            40%{background-image:url("image/boy3.jpg");}
+            60%{background-image:url("image/boy4.jpg");}
+            80%{background-image:url("image/boy5.jpg");}
+            100%{background-image:url("image/boy1.jpg");}
+        }
+        @keyframes moveRunner{
+            from{left:-250px;}
+            to{left:100%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="runner"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         /***forEach() loops once for each element in the array***/
+        /* syntax for array
+        array.forEach(function(value,index,array)
+        {
+
+        })*/
+        numbers=[10,20,30];
+        numbers.forEach(function(num){ 
+            console.log(num);// num is a parameter, and it helps you receive the value from the array.
+        })
+        let fruits=["apple","mango","orange"];
+        fruits.forEach(function(num1,i){//num is value/parameter,i is array index
+          console.log("i"+" "+"num1");
+        })
+        let n=[40,20,35];
+        n.forEach(function(num2,i1,array1){
+            console.log("Value:",num2,"| Index:",i1,"| Full Array",array1);
+        })
+        //arrow function using forEach
+        let arr=[1,2,3];
+        arr.forEach(n=>console.log(n*2));
+        
+        
+
+        
+    </script>
+</head>
+<body>
+    <p class="item">Ramya</p>
+    <p class="item">Priya</p>
+    <script>
+        /**forEach() with DOM**/
+        let a=document.querySelectorAll("p");
+        a.forEach(n3=>{
+            n3.style.backgroundColor="green";
+        })
+    </script>
+    
+</body>
+</html>

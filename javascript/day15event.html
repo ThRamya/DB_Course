@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,
+        select {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Validation Form</h2>
+    <form id="form">
+        <label for="name">Name:</label><input type="text" id="name">
+        <span id="nameerr"></span>
+
+        <label for="email">Email:</label><input type="text" id="email">
+        <span id="emailerr"></span>
+
+        <label for="password">Password</label><input type="text" id="password">
+        <span id="passerr"></span>
+
+        <label for="phone">Phone:</label><input type="number" id="phone">
+        <span id="phonenumerr"></span>
+
+        <label for="gender">Gender:</label>
+        <Select id="gender">
+            <option value="">select</option>
+            <option>Male</option>
+            <option>Female</option>
+        </Select>
+        <span id="gendererr"></span>
+        <br>
+        <button type="submit" id="submit"> Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <script>
+        let mainform = document.getElementById("form");
+        let nameint = document.getElementById("name");
+        let emailint = document.getElementById("email");
+        let passint = document.getElementById("password");
+        let phoneint = document.getElementById("phone");
+        let genderdrop = document.getElementById("gender");
+        let subbut = document.getElementById("submit");
+
+        //focus
+        nameint.addEventListener("focus", function () {
+            this.style.backgroundColor = "lightyellow";
+        });
+        //blur
+        nameint.addEventListener("blur", function () {
+            if (this.value === "") {
+                document.getElementById("nameerr").innerText = "Name required";
+            } else {
+                document.getElementById("nameerr").innerText = "";
+            }
+            this.style.backgroundColor = "white";
+        })
+        //input
+        emailint.addEventListener("input", function () {
+            if (!this.value.includes("@gmail.com")) {
+                document.getElementById("emailerr").innerText = "Invalid Email";
+            }
+            else {
+                document.getElementById("emailerr").innerText = "";
+            }
+        })
+        //change
+        genderdrop.addEventListener("change", function () {
+            if (this.value === "") {
+                document.getElementById("gendererr").innerText = "Select gender";
+            }
+            else {
+                document.getElementById("gendererr").innerText = "";
+                console.log("Changed:", this.value);
+
+            }
+        })
+        //click
+        subbut.addEventListener("click", function () {
+            console.log("Button clicked");
+        })
+        emailint.addEventListener("focusin", function () {
+            console.log("Focus entered email");
+        });
+        emailint.addEventListener("focusout", function () {
+            console.log("Focus left email");
+        });
+        mainform.addEventListener("reset", function () {
+            alert("Form Reset!");
+        });
+        phoneint.addEventListener("paste", function () {
+            alert("Paste not allowed");
+        });
+        phoneint.addEventListener("cut", function () {
+            alert("Cut detected");
+        });
+        phoneint.addEventListener("copy", function () {
+            alert("Copy detected");
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing Objeccts</title>
+</head>
+<body>
+    <script>
+         let obj1={f_name:"jb", roll:40}
+        let var1=obj1.f_name;
+        let var2=obj1["roll"];
+
+        let {f_name,roll}=obj1;
+        console.log(f_name);
+
+
+        let obj={
+            s_name: "Lakshmi",
+            age: 82,
+            add : {
+                country : "India",
+                state : "tn",
+                details:{
+                    code: "62",
+                    pincode:"987121"
+                }
+            }
+        }
+
+       
+
+        let {s_name,age,add:{ details:{code=value}, state=value, country}}=obj;
+        console.log(code);
+        console.log(state);
+        console.log(country);
+
+    
+        var names = ["abc","def","ghi","jkl"];
+
+        var [,,t] = names;
+        var [x,y,...third] = names;
+       // console.log( [a,b] = names);
+        console.log(third);
+        console.log(x);
+        console.log(y);
+        var[a,b,c,d]=names;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(a);
+
+    </script>
+</body>
+</html>

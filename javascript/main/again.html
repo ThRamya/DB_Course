@@ -1,0 +1,85 @@
+<!doctype html> <!--html version--> <!--if no<!doctype html> then it is in quirks mode(old version like internetexplorer here layout may break not work in standard mode) -->
+<html lang="en"> <!--html is the root(main tag) element and set a language-->
+    <head><!--inside head we can add meta,title,link,style,script-->
+        <meta charset="utf-8"><!--Meta is information about page, Meta tags provide metadata (information about the webpage). here Uniform Transformation Format UTF-8 encodes Unicode code points into bytes, and those bytes are stored in binary form.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Viewport controls page layout on different devices.
+         width=device-width sets the page width to match the device screen.
+         initial-scale=1.0 sets the default zoom level.
+         Helps make the website responsive on mobile and laptop screens. -->
+         <meta name="description" content="Practicing html">
+<!-- Meta description is not displayed on the webpage.
+     It is used by search engines to understand the page content
+     and may appear in search results. -->
+     <title>Ramya</title><!--display in browser tab title-->
+     <link rel="icon" href="image/Swimming.jpg">
+     <link rel="stylesheet" href="day1.css">
+     <script src="day1.js"></script>
+    </head>
+     <body>
+        <!--form-->
+        <form action="again.html" method="get" enctype="multipart/form-data" novalidate>
+        <!--text-->
+        <label for="name1">Username:</label>
+        <input id="name1" type="text" name="fname" placeholder="Enter your Username" required><br>
+        <!--password-->
+        <lable for="password1">Password:</lable>
+        <input id="password1" type="password" name="password" placeholder="Enter your password" ><br>
+        <!--radio-->
+        <p>Gender:</p>
+        <input type="radio" id="r1" name="gender" value="male">
+        <label for="r1">Male</label><br>
+        <input type="radio" id="r2" name="gender" value="female">
+        <label for="r2">Female</label><br>
+        <!--checkbox-->
+        <p>Subject</p>
+        <input type="checkbox" name="subject" id="c1" value="cs">
+        <label for="c1">Computer Science</label><br>
+        <input type="checkbox" name="subject" id="c2" value="maths">
+        <label for="c2">Maths</label><br>
+        <input type="submit" value="click me"><br>
+        <!--dropdown--select,option-->
+        <label for="s1">Select a deparment</label>
+        <select id="s1" name="depart">
+            <option value="">--Select--</option>
+            <option value="it1">IT</option>
+            <option value="cs1">CS</option>
+        </select><br>
+        <!--button-->
+        <input type="button" value="button" onclick="alert('HI')"><br>
+        <!--file-->
+        <label for="f1">Select a file</label>
+        <input type="file" id="f1" name="file1" multiple><br>
+        <input type="submit" value="submit"><br>
+        <!--download using anchor tag-->
+        <a href="image/K71768032624250.pdf" download>Download a document</a><br>
+        <!--Image-->
+        <input type="image" src="image/demonstartion.avif" alt="demo"><br>
+        <!--Color-->
+        <label id="favcolor">Select a color</label>
+        <input type="color" id="favcolor" name="color1" value="#ff0000"><br>
+        <!--Search-->
+        <input type="search" name="s1" placeholder="type a word to search">
+        <input type="submit" value="submit"><br>
+        <!--url-->
+        <label for="urll">Type a link:</label>
+        <input type="url" id="url11" name="url1" placeholder="https:chatgpt.com">
+        <!--moving word-->
+        <marquee>Welcome to my website</marquee>
+        <!--audio-->
+        <audio controls autoplay muted><source src="audio_video\mixkit-classic-alarm-995.wav" type="audio/wav">Audio doesn't work</audio><br>
+        <!--video-->
+        <video controls muted loop poster="image/planing.avif" width="280" height="280"><source src="audio_video\101245-video-720.mp4" ></video><br>
+        <table></table>
+
+
+       
+
+        
+       
+
+
+
+        </form>
+     </body>
+</html>

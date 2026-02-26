@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Object enhancement means creating object using variable name directly.
+        /**Normal way (old method)**/
+        let name = "Ramya";
+        let age = 25;
+        let obj = {
+            name: name,
+            age: age
+        };
+        console.log(obj);
+        /**Enhancement way (modern method)**/
+        let name1 = "Radhika";
+        let age1 = 26;
+        let obj1 = { name1, age1 };
+        console.log(obj1);
+        /**Object Enhancement with function**/
+        /*old way*/
+        let obj2 = {
+            greet: function () {
+                console.log("Hello");
+            }
+        };
+        obj2.greet();
+        /*new way*/
+        let obj3 = {
+            greet() {
+                console.log("Ramya");
+            }
+        };
+        obj3.greet();
+        /**Template Literal (Multi-line String)-(Uses backtick: ` `)**/
+        let text = `Hello
+                    Ramya`;
+        console.log(text);
+        /**Template literal with variable**/
+        let name11 = "Ramya";
+        let text1 = `Hello ${name11}`;
+        console.log(text1);
+        /**Multiple variables example**/
+        let name12 = "Ramya";
+        let age12 = 25;
+        console.log(`My name is ${name12} and age is ${age12}`);       
+    </script>
+</body>
+
+</html>

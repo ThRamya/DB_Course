@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://api.github.com/users/anuradha9712")
+        
+        .then(r=>r.json())
+        .then(data=>{
+
+        let {id,location,name,login,company}=data;
+        console.log(id);    
+        console.log(company);
+        console.log(location);
+        console.log(name); 
+       
+        document.querySelector("#fullname").innerText=name;   
+        document.querySelector("#age").innerText=id;   
+        document.querySelector("#company").innerText=company;   
+        document.querySelector("#login").innerText=login;   
+        document.querySelector("#location").innerText=location;   
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //const-->key(declarevariable,obj-->object,roll-->porperty/key,45-->value/returned result)
+        const obj={roll:45,student_name:"ramya",student_lastname:"chandra",
+                   fullName:function(){
+                      return this.student_name+" "+this.student_lastname;
+                   }
+        }
+        obj.roll=89;
+        console.log(obj.roll); 
+        alert(obj.student_name);
+        document.write(obj.roll);
+        /*second method for object*/
+        console.log(obj["student_name"]);
+        console.log(obj.fullName());
+    </script>
+</head>
+<body>
+        <p id="demo">
+
+        </p>
+        <script>
+        document.getElementById("demo").innerText=obj.student_name;
+        </script>
+  
+    
+</body>
+</html>

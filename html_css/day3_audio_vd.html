@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="day3assessment">
+    <title>AudioVideo</title>
+    <link rel="icon" href="image/favicon.png" type="image/png">
+   <!-- <base href="image/" target="_blank">-->
+</head>
+<body>
+    <p>Audio</p>
+    <audio controls>
+        <source src="audio_video/mixkit-classic-alarm-995.wav" type="audio/wav">
+        Your browser doesn't support the audio element.
+    </audio> <br>
+    <p>Audio muted</p>
+    <audio controls autoplay muted>
+        <source src="audio_video/mixkit-classic-alarm-995.wav" type="audio/wav">
+        Your browser doesn't support autoplay audio element.
+    </audio><br>
+    <p>Video with poster</p>
+    <video controls muted loop poster="image/Swimming.jpg"  width="370" height="220">
+        <source src="audio_video/101245-video-720.mp4" type="video/mp4">
+        Your browser doesn't support autoplay video element.
+    </video>
+    <h2>My YouTube Video</h2>
+
+     <iframe width="560" height="315"
+        src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe><br>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+     Watch video on YouTube
+    </a><br>
+    <b>Abbrevation</b>
+    <p>In Engg college there is a department called as <abbr title="Information Technology">IT</abbr></p>
+    <b>Caption</b>
+    <table border="3">
+        <caption>Expenses</caption>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th colspan="2">To shop</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>maggi</td>
+                <td>pasta</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>samosa</td>
+                <td>panipuri</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!--<a href="image/download.jpg" download="car.jpg">
+  <img src="image/download.jpg" alt="Driving" width="104" height="142">
+  <a href="image/download.jpg" download="test.jpg">Download</a>
+
+</a>-->
+<!--<blockquote> is used to display long quotations, and the cite attribute is used to specify the source of the quoted content.-->
+<blockquote cite="day1.html">
+   Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
+    It defines the content and structure of web content.
+</blockquote>
+<q>blockquote tag is used to display long quotations, and the cite attribute is used to specify the source of the quoted content</q>
+<dialog open>
+  <p>This is a dialog box</p>
+</dialog><br>
+<b>Downloading pdf</b>
+<a href="image/K71768032624250.pdf" download>Document to download </a>
+
+<h1>The embed Document</h1>
+
+<embed src="image/K71768032624250.pdf" width="600" height="400" type="application/pdf">
+<h2>Embed video</h2>
+<embed src="audio_video/101245-video-720.mp4" width="600" height="400" type="video/mp4"><br>
+<label>Downloading Progress</label><br>
+<progress value="32" max="100">32%</progress>
+<h1>The ruby and rt elements</h1>
+<!--ruby text-->
+<p>Ruby</p>
+<ruby>
+ R<rt>34</rt>
+</ruby>  <br>
+<figure>
+  <img src="image/Swimming.jpg" alt="Swimming">
+  <figcaption>Champion</figcaption>
+</figure> 
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer_layer{
+            width: 500px;
+            height:400px;
+            border: 3px solid red;
+        }
+        .ball_holder{
+            height: 173px;
+             width: 167px;
+            background-image: url("../image/ball.png"); 
+            animation: ball_bounce;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+        }
+        @keyframes ball_bounce{
+            0%{     background-image: url("../image/ball.png");position:relative;top:100px;left:0px}
+            25%{background-image: url("../image/ball.png");position:relative;top:230px;left:150px}
+            50%{   background-image: url("../image/ball.png");position:relative;top:126px;left:334px}
+            75%{   background-image: url("../image/ball.png");position:relative;top:0px;left:134px}
+            100%{     background-image: url("../image/ball.png");position:relative;top:100px;left:0px}
+        }
+        .modified_rotate{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 128, 0);
+    position: fixed;
+    top: 500px;
+    left:0px;
+    transform:rotate(4deg);/*  rotateX(50deg);rotateY(45deg); rotate(45deg); rotate3D(2,1,1,45deg) */
+animation-name: rotate_square;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+    }
+    @keyframes rotate_square{
+        from{transform: rotateZ(0deg);}
+        /* 25%{transform: rotateZ(45deg);left:400px;}
+        50%{transform: rotateZ(90deg);left:500px;}
+        75%{transform: rotateZ(135deg);left:600px;} */
+        to{transform: rotateZ(180deg);left:700px;}
+
+    }
+
+    </style>
+</head>
+<body>
+    <div class="outer_layer">
+        <div class="ball_holder">
+
+        </div>
+    </div>
+       <div class="outer_layer">
+        <div class="cat_holder">
+
+        </div>
+    </div>
+       <div class="modified_rotate">
+
+    </div>
+    
+</body>
+</html>

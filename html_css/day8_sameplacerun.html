@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh; /*vh = viewport height,100vh = 100% of screen height*/
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+      background: #f2f2f2;
+    }
+
+    .runner{
+      width:250px;
+      height:400px;
+      background-image: url("boy1.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: run 1s infinite;
+    }
+    @keyframes run {
+      0%{background-image:url("image/boy1.jpg");}
+      20%{background-image:url("image/boy2.jpg");}
+      40%{background-image:url("image/boy3.jpg");}
+      60%{background-image:url("image/boy4.jpg");}
+      80%{background-image:url("image/boy5.jpg");}
+      100%{background-image:url("image/boy1.jpg");}
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="runner"></div>
+</body>
+</html>
