@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**regular parameter function**/
+        function add(a,b){
+            return console.log(a+b);
+        }
+        add(4,5);
+        bp=8000;
+        hra=4000;
+        da=6000;
+        ta=2500;
+        function payroll(bp,da,hra=0,ta=0){//default parameter
+            return console.log("net salary"+(bp+da+hra+ta))
+        }
+        payroll(bp,da,hra,ta);
+        payroll(bp,da); //what is mim parameter in function payroll 
+    </script>
+</body>
+</html>

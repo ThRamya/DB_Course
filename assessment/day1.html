@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Input_type</title>
+</head>
+<body>
+    <form action="day1.html" method="post" enctype="multipart/form-data">
+    <label for="uname">Username</label>
+    <input type="text" id="uname" name="uname1" value=""/><br>
+    <label for="pswd">Password</label>
+    <input type="password" id="pswd" name="pswd1" value=""/><br>
+    <input type="submit" value="submit"/>
+    <input type="reset" value="reset"/><br>
+    <p style="color:brown">Select language</p>
+    <input type="radio" id="l1" name="l11" value="html">
+    <label for="l1">HTML</label><br>
+    <input type="radio" id="c1" name="c11" value="css">
+    <label for="c1">CSS</label><br>
+    <input type="radio" id="j1" name="j11" value="javascript">
+    <label for="j1">Javascript</label><br>
+    <input type="submit" value="submit"><br>
+    <p style="color:red">Select Vehicle</p>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br><br>
+    <input type="button" onclick="alert('my world')" value="clickme"/><br><br>
+    <label for="f1">Favcolor</label>
+    <input type="color" id="f1" name="f11" value="#ff0000"/><br>
+    <input type="submit" value="submit"><br>
+    <lable for="d1">Birthday</lable>
+    <input type="date" id="d1" value="birthday"/><br>
+    <input type="submit" value="submit"><br>
+    <lable for="dd1">Birthday(date and time)</lable>
+    <input type="datetime-local" id="dd1" value="birthday"/><br>
+    <input type="submit" value="submit"><br>
+    <label for="e1">Enter your email:</label>
+    <input type="email" id="e1" name="email">
+    <input type="submit" value="Submit"><br>
+    <input type="image" src="../image/Swimming.jpg" alt="Swimming" width="120" height="120"><br>
+    <label for="myfile">Select a file:</label>
+    <input type="file" id="myfile" name="myfile"><br>
+    <input type="submit" value="Submit"><br><br>
+    <label for="bdm1">Birthday (month and year):</label>
+    <input type="month" id="bdm1" name="bdaymonth"><br><br>
+    <input type="submit" value="Submit"><br>
+    <label for="q1">Quantity (between 1 and 5):</label>
+    <input type="number" id="q1" name="quantity" min="1" max="5">
+    <input type="submit" value="Submit"><br><br>
+    <label for="s1">Search Google:</label>
+    <input type="search" id="s1" name="search"><br>
+    <input type="submit" value="Submit"><br>
+    <label for="homepage">Add your homepage:</label>
+    <input type="url" id="homepage" name="homepage">
+    <input type="submit" value="Submit"><br><br>
+    <label for="w1">Select a week:</label>
+    <input type="week" id="w1" name="week">
+    <input type="submit" value="Submit"><br>
+    <label for="phone">Enter a phone number:</label><br><br>
+    <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+    <small>Format: 123-45-678</small><br><br>
+    <input type="submit" value="Submit"><br><br>
+</form>
+</body>
+</html>

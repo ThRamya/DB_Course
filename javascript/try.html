@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Select Student</h3>
+    <select id="selectstudent">
+        <option value="">--select Student--</option>
+    </select><br>
+    Enter Grade:
+    <input type="text" id="gradeinput">
+    <br>
+    <button onclick="Checkgrade()">check</button>
+    <p id="result"></p>
+    <script>
+        let students = [
+            { name: "Ramya", grade: "A" },
+            { name: "John", grade: "B" },
+            { name: "Abi", grade: "A" },
+            { name: "Priya", grade: "A" },
+            { name: "Arun", grade: "B" },
+            { name: "Kumar", grade: "A" },
+            { name: "Divya", grade: "A" },
+            { name: "Ravi", grade: "B" },
+            { name: "Meena", grade: "A" },
+            { name: "Siva", grade: "A" },
+            { name: "Anu", grade: "B" },
+            { name: "Vijay", grade: "A" },
+            { name: "Ajith", grade: "A" },
+            { name: "Surya", grade: "B" },
+            { name: "Karthi", grade: "A" },
+            { name: "Nisha", grade: "A" },
+            { name: "Hari", grade: "B" },
+            { name: "Devi", grade: "A" },
+            { name: "Mani", grade: "A" },
+            { name: "Bala", grade: "B" },
+            { name: "Kavi", grade: "A" },
+            { name: "Reena", grade: "A" },
+            { name: "Sam", grade: "B" },
+            { name: "Raj", grade: "A" },
+            { name: "Latha", grade: "A" },
+            { name: "Vani", grade: "B" },
+            { name: "Gopi", grade: "A" },
+            { name: "Naveen", grade: "A" },
+            { name: "Sara", grade: "B" },
+            { name: "Leo", grade: "C" }
+        ];
+        let select = document.getElementById("selectstudent");
+        for (let i = 0; i < students.length; i++) {
+            let option = document.createElement("option");
+            option.value = students[i].name;
+            option.text = students[i].name;
+            select.appendChild(option);
+        }
+        function Checkgrade() {
+            let selectname = document.getElementById("selectstudent").value;
+            let entergrade = document.getElementById("gradeinput").value;
+            let foundgrade = "";
+            for (let i = 0; i < students.length; i++) {
+                if (students[i].name === selectname) {
+                    foundgrade = students[i].grade;
+                    break;
+                }
+            }
+            if (foundgrade === entergrade) {
+                document.getElementById("result").innerHTML = "Right";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Wrong";
+            }
+        }
+    </script>
+</body>
+
+</html>

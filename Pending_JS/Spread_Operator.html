@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Spread operator(...) is used to:copy array,copy object,merge array / object
+        /**Array copy**/
+        let arr1 = [10, 20, 30];
+        let arr2 = arr1;
+        arr2[0] = 100;
+        console.log("arr1:", arr1);
+        console.log("arr2:", arr2);
+        /**Correct way using spread**/
+        let arr3 = [10, 20, 30];
+        let arr4 = [...arr3];
+        arr4[0] = 90;
+        console.log("spread array", arr3);
+        console.log("arr4", arr4);
+        /**Merge Arrays**/
+        let c = [1, 2];
+        let d = [3, 4];
+        let e = [...c, ...d];
+        console.log("merge array", e);
+        /**Object Copy**/
+        let obj5 = { name6: "Priya", age: 30 };
+        let obj6 = obj5;
+        console.log(obj5);
+        console.log(obj6);
+        /**Add new value using spread**/
+        let arr = [10, 20];
+        let newArr = [...arr, 30];
+        console.log("Add a value using spread", newArr);
+        /**interview qn**/
+        let a = [1, 2];
+        let b = [...a];
+        b.push(3);
+        console.log(a);//1,2
+        console.log(b);//1,2,3
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

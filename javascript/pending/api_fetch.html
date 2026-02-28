@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function g_data(){
+let res= await fetch("https://api.github.com/users/anuradha9712");
+let r_data= await res.json()
+console.log(r_data);
+        }
+        g_data();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>First Name:</label>
+    <input type="text" name="fname" id="fname">
+    <input type="email" name="email" id="email" required>
+    <input type="submit" name="submit">
+    <script>
+        // let firstname = document.getElementById("fname").value.trim();
+        // if (firstname === "") {  //directly if we give like this it will load like this add event name use it to rectify this
+        //     alert("press letter to enter name ");
+        // }
+
+
+         document.getElementById("form1").addEventListener("submit",function(){
+                    //get value , first and back remove space using trim
+                    let firstname = document.getElementById("fname").value.trim();
+                    if(firstname==""){  //=== is work for empty space // == if open a page alert is poped up 
+                         alert("press letter to enter name ");
+                    }});
+    </script>
+</body>
+
+</html>

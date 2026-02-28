@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="day6assessment">
+    <title>My page</title>
+    <link rel="icon" src="image/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+
+    }
+    body{
+        background-color: gray;
+        color:White;
+        line-height:1.6 ;
+    }
+    /*header*/
+    header {
+        position: fixed;
+        top: 0;
+        width:100%;
+        background-color: pink;
+        box-shadow:0 2px 10px rgba(0,0,0,0.08);
+        z-index:1000;
+      
+    }
+    .navbar{
+        display:flex;
+        padding:15px,20px;
+        margin:auto;
+        align-items: center;
+        max-width:1200px;
+        justify-content: space-between;
+
+    }
+    .logo{
+        font-size: 24px;
+        font-weight: 700;
+        color:aquamarine;
+
+
+    }
+    nav ul{
+        display:flex;
+        gap:25px;
+        list-style:none;
+    }
+    ul li a {
+        text-decoration: none;
+        color:black;
+        text-align: center;
+        padding:14px 16px;
+    }
+    ul li a:hover{
+        color:aqua;
+    }
+    /*hero*/
+    .hero{
+     display:flex;
+     align-items: center;
+     background:gray ;
+     margin-top: 80px;
+     min-height: 90vh;
+     color:white;
+    }
+    .hero-content{
+        max-width:1200px;
+        display:grid;
+        padding:20px;
+        gap:40px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin:auto;
+    
+    }
+    /*Features*/
+    section{
+        padding: 80px 20px;
+    }
+    .container{
+        max-width: 1200px;
+        margin:auto;
+    }
+    .title {
+        text-align: center;
+        margin-bottom: 60px;;
+    }
+    .title h2{
+        font-size:36px;
+        margin-bottom: 10px;
+    }
+    .title p{
+        color:aquamarine;
+    }
+    .Fdivide{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:30px;
+    }
+    .feature-card{
+        background: paleturquoise;
+        box-shadow:0 10px 25px rgba(0,0,0,0.08);
+        padding: 30px;
+        border-radius: 20px;
+        transition:0.3s;
+    }
+    .feature-card h3{
+        margin-bottom:10px;
+        color:indigo;
+    }
+    .feature-card:hover{
+       transform:translateY(-10px);
+      
+    }
+    /*Services*/
+    .services{
+      background:#eef2ff;
+    }
+   
+    .service_grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr)) ;
+        gap:30px;
+    }
+    .service_card{
+        background: palevioletred;
+        box-shadow:0 10px 25px rgba(0,0,0,0.08);
+        padding: 30px;
+        border-radius: 20px;
+         text-align: center;;
+    }
+    .service_card h3{
+        margin-bottom:10px;
+        color:indigo;
+    }
+    /*Gallery*/
+    .Gallery{
+        display:grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap:20px;
+    }
+    .Gallery img{
+        width:100%;
+        border-radius: 15px;
+        transition:0.3s;
+    }
+    .Gallery img:hover{
+        transform:scale(1.05);
+    }
+    /*Contact*/
+    .Contact{
+        background-color: pink;
+        color:black;
+    }
+    .Contact form{
+        max-width:600px;
+        display:grid;
+        margin:auto;
+        gap:20px;
+        border-radius: 30px;
+    }
+    footer{
+        background: black;
+        color:white;
+        text-align: center;
+        padding:20px;
+    }
+    
+
+</style>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="navbar">
+            <div class="logo">ProWeb</div>
+            <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Features">Features</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Gallery">Gallery</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+           </nav>
+       </div>
+    </header>
+    <!--hero-->
+    <section class="hero" id="Home">
+    <div class="hero-content">
+        <div>
+        <h1>Build Modern Websites with HTML & CSS</h1>
+        <p>A complete professional website layout using only HTML and CSS. Clean, responsive and modern design.</p>
+        <button>Get Started</button>
+        </div>
+        <div>
+        <img src="image/planing.avif" type="image/avif" alt="Swimmer">
+        </div>
+    </div>
+    </section>
+    <!--Features-->
+    <section  id="Features">
+        <div class="container">
+        <div class="title">
+          
+            <h2>Features</h2>
+            <p>Why this website layout is powerful</p>
+            
+        </div>
+        <div class="Fdivide">
+         
+         <div class="feature-card">
+            <h3>Responsive Design</h3>
+            <p>Works perfectly on mobile, tablet and desktop screens.</p>
+         </div>
+         <div class="feature-card">
+            <h3>Modern UI</h3>
+            <p>Clean layout using flexbox, grid and smooth hover effects.</p>
+         </div>
+         <div class="feature-card">
+            <h3>Pure HTML & CSS</h3>
+            <p>No JavaScript or frameworks used in this design.</p>
+         </div>
+         </div></div>
+    </section>
+    <!--Services-->
+    <section class="service" id="Services">
+        <div class="container">
+        <div class="title">
+            <h2>Services</h2>
+            <p>What we offer</p>
+        </div>
+        <div class="service_grid">
+        <div class="service_card">
+            <h3>Web Design</h3>
+            <p>vProfessional and modern website designs.</p>
+        </div>
+        <div class="service_card">
+            <h3>UI/UX</h3>
+            <p>User-friendly interfaces with clean layouts.</p>
+        </div>
+        <div class="service_card">
+            <h3>Responsive Layout</h3>
+            <p>Mobile-first and fully responsive designs.</p>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!--Gallery-->
+    <section id="Gallery">
+        <div class="container">
+        <div class="title">
+        <h1>Gallery</h1>
+        <p>Our recent works</p>
+        </div>
+        <div class="Gallery">
+                <img src="image/demonstartion.avif" type="image/avif" alt="demo">
+                <img src="image\discussion.avif" type="image/avif" alt="discussion">
+                <img src="image/laptop_one.avif" type="image/avif" alt="coding">
+                <img src="image/working.avif" type="image/avif" alt="working">
+            </div>
+        </div>
+    </section>
+   <section class="Contact" id="Contact">
+    <div class="container">
+        <div class="title">
+            <h2>Contact Us</h2>
+            <p>Get in touch</p>
+        </div>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="text" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+   </section>
+   <!--Footer-->
+   <footer>
+    <p>© 2026 ProWeb. All rights reserved.</p>
+   </footer>
+</body>
+
+
+</html>

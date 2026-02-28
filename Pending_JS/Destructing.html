@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Destructuring means:Extract values from object or array into variables
+        /**Array Destructing**/
+        let arr = [10, 20, 30];
+        let [a, b, c] = arr; //value ->it take index value 
+        console.log(a, b, c);
+        /**object destructuring**/
+        /*Noraml way(without destructing)**/
+        let obj = { name: "Ramya", age: 26 };
+        console.log(obj.name, obj.age);
+        /**object destructing**/
+        let obj1 = { name2: "Chandra", age: 55 };
+        let { name2, age } = obj1;
+        console.log(name, age);
+        /**Different variable name(You can rename variable:)**/
+        let obj2 = { name: "Mariappan", age: 60 };
+        let { name: name1, age: age1 } = obj2;
+        console.log(name1, age1);
+        /**Nested destructuring**/
+        /**Object inside object:**/
+        let user = {
+            name3: "Radhika", address: {
+                city: "Chennai",
+                pincode: 600001
+            }
+        };
+        console.log(user.address.pincode);
+        /**Destructuring way**/
+        let { name3, address: { city, pincode } } = user;
+        console.log(city, pincode);
+        /**Mixed Example**interview qn**/
+        let student = {name4:"Ramya",marks: {maths: 90,
+                                            science: 85
+                                            }
+                        };
+        let { name4, marks: { maths, science } } = student;
+        console.log(name,maths,science);
+/**Default value**/
+        let obj3={name5:"Rathna"};
+        let{name5,age2=15}=obj3;
+        console.log(name5,age2);
+    </script>
+</body>
+
+</html>

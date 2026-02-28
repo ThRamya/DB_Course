@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*  let newArray = array.filter(function(element, index, array) {
+              // return true to keep element, false to discard it
+              });
+        */
+        /**Filter**/
+        let  numbers= [10, 59, 73, 84, 95];
+        let filteredNumbers  = numbers.filter(function (num1) { //using function
+            return num1 <80;
+        })
+        console.log(filteredNumbers );
+        let  num= [10, 59, 73, 84, 95];
+        let filteredNum = num.filter(number=>number >80); //using arrow function
+        console.log(filteredNum);
+       
+         /**reduce**/
+            /*  let result = array.reduce(function(accumulator, currentValue, index, array) {
+                    // do something with accumulator and currentValue
+              return accumulator; // must return the updated accumulator
+              }, initialValue);
+            */
+           let number=[10,20,30,40];
+           let result=number.reduce(function(acc,cur){
+              return acc+cur;
+           },0);
+           console.log(result);
+            
+           let numb1=[100,20,30,40];
+           let res=numb1.reduce((acc,cur)=>acc+cur,0);
+           console.log(res);
+
+           /**key**/
+           //let iterator = array.keys();
+
+           let fruits=["apple","mango","banana"];
+           let k=fruits.keys();
+           for(let a of k){
+            console.log(a);//it only gives indices, not the values.
+           }
+
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

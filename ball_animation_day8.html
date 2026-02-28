@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Animantion_ball">
+        <title>Animation</title>
+        <style>
+            .box{
+                width:100px;
+                height:100px;
+                background-color: blue;
+                animation: move 2s infinite; /*move -key frame name,2 -duration(2sec),infinite-repeat forever*/
+            }
+            @keyframes move{
+                from{
+                    transform: translateX(0px); /*translateX → move left ↔ right*/
+                }
+                to{
+                    transform: translateX(300px);
+                }
+            }
+            .ball{
+                width:80px;
+                height:80px;
+                background-color: pink;
+                border-radius: 50%;
+                animation: bounce 3s infinite;
+            }
+            @keyframes bounce{ /*0% → start,50% → middle,100% → end*/
+                0%{ transform: translateY(0px);}
+                50%{ transform: translateY(-200px);}
+                100%{transform: translateY(0px);}
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <div class="ball"></div>
+   
+   
+    </body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JSON stands for JavaScript Object Notation.
+        //It’s a lightweight format to store and exchange data between a server and a client (like a browser).
+        //JSON supports these data types: String, Number, Boolean, Array, Object and Null
+
+//How to use JSON in JavaScript
+   let jsonString = `{"name":"Ramya","age":26}`;
+
+// Convert JSON string to JS object
+let obj = JSON.parse(jsonString);
+console.log(obj.name,obj.age); // Ramya 26
+
+// Convert JS object to JSON string
+let json =JSON.stringify(obj);
+console.log(json); // '{"name":"Ramya","age":25}'   
+
+        
+        
+
+    </script>
+</body>
+
+</html>

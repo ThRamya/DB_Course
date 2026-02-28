@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /***splice***/
+        // array1.splice(2,0,"56");// 2-->2nd position,0 -- it won't del values 56 is come to 2nd position
+        //    console.log(array1);
+        //     array1.splice(2,2,"rajan");//2--> 2nd position,2-->after the 2nd position it remove the 2 values and inserted  the value with rajan name
+        //     console.log(array1);
+        //   let a=[14,32,75,98,23]
+        //    console.log("original array:",a);//2--> 2nd position,2-->after the 2nd position it remove the 2 values and inserted  the value with rajan name
+        //   let b=a.splice(2,4,45,"78","89");//splice() → changes original array ,splice() → returns deleted elements
+        //   console.log(b);//(3) [75, 98, 23] splice() returns the deleted elements, not the updated array.
+        //   console.log("updated array:",a);
+        /***slice**/
+        // array1 = [45, 67, 89, "ramya", "chandra"];//slice(1,3)-->slice(start,end)indices, end won't display only from start and before end
+        // let array2 = array1.slice(1,3);  //slice():Does NOT change original array,Returns a new array
+        // let brray=array1.slice(2);//slice(2) is a starting indices to end(It starts from that index and goes until end of array)
+        // console.log("brray:",brray);
+        //  let brray1=array1.slice(-2);//slice(-2) is a starting indices to end (assing a value from last like -1,-2,-3,-4,-5 ,here last indices is -1(!imp))
+        // console.log("brray1",brray1); 
+        //    let brray2=array1.slice();// it will display everything inside array like normal array;
+        //     console.log(brray2);
+
+        //intervoew_qn
+        // let a1 = [14, 32, 75, 98, 23];
+        // let b1 = a1.splice(2, 4, 45, "78", "89");
+        // console.log(b1.length);
+        // let res = ((a1.splice(2, 4, 45, "78", "89")).length);//in splice it returns the del elements
+        // console.log(res);
+
+        var array1 = [56, 65, 89];
+        array1.unshift(31); // insert from first
+        console.log(array1);
+        array1.unshift(25);
+        console.log(array1);
+        array1.shift();
+        console.log(array1);//delete from first
+        // shift  → remove front
+        // unshift → add front
+        array1.pop();
+        console.log(array1);
+        array1.unshift(3, [69, 38]);
+        console.log(array1); //op:[3, Array(2), 31, 56, 65] =>[3,[69,38] , 31, 56, 65] => This is called a nested array.
+        array1.shift();
+        console.log(array1);
+        array1.shift();
+        console.log(array1);
+        var out = array1.shift();// returns what it removes
+        console.log(out);
+        let var1 = 45555555n
+        console.log(var1);
+        console.log("45555555n", typeof (var1));
+        let var2 = Date();
+        console.log(var2);
+        console.log("Date()", typeof (var2));
+        let ar3 = [10, 30];
+        console.log("[10,30]", typeof (ar3));
+        let var5 = null;
+        console.log("null", typeof (var5));
+        let var4 = { roll: 89 };
+        console.log("{roll:89}", typeof (var4));
+        console.log("{roll:89}", var4 instanceof Object);//instance of operator returns true or false
+        console.log("{roll:89}", var4 instanceof String);
+        let var7 = 90;
+        console.log(var7 instanceof Number);//o/p: false because it is primitive data types //instanceof → used for objects
+        /**diff concept**/
+        let b = new Number(90);//b=>object reference
+        console.log(b instanceof Object); //op: true
+        var a = [90, 89, 99];
+        console.log("[90,89,99]", a instanceof Array);//in array we can call as object 
+        console.log("[90,89,99]", a instanceof Object);
+        console.log("{roll:89}", var4 instanceof Array);//in object we can't call as array
+        let ude;// undefined variable
+        console.log(ude);
+        console.log(typeof (ude));
+
+
+
+      let arr = [1,2,3,4];
+
+// Old splice
+let removed = arr.splice(1,2,9,8);
+console.log(arr);     // [1,9,8,4]  (changed!)
+console.log(removed); // [2,3]      (deleted elements)
+
+// New toSpliced
+let newArr = arr.toSpliced(1,2,9,8);
+console.log(arr);    // [1,2,3,4]  (original unchanged)
+console.log(newArr); // [1,9,8,4]  (new array with changes)
+
+
+//reverse vs toReversed
+let arr2 = [1,2,3];
+// Old reverse (mutable)
+let reversed = arr2.reverse();
+console.log("arr2 after reverse:", arr2);    // [3,2,1]  (changed)
+console.log("Reversed array:", reversed);    // [3,2,1]  (same array)
+
+// Reset arr2 for immutable example
+arr2 = [1,2,3];
+
+// New toReversed (immutable)
+let newArr2 = arr2.toReversed();
+console.log("arr2 after toReversed:", arr2); // [1,2,3]  (unchanged)
+console.log("New reversed array:", newArr2); // [3,2,1]
+
+//sort/toSorted
+arr3=[3,1,2];
+arr3.sort();  
+console.log("arr3 after sort():", arr3);    // [1,2,3]  (original changed)
+
+// Reset arr3 for immutable example
+arr3 = [3,1,2];
+
+// --- New toSorted (immutable) ---
+let newArr3 = arr3.toSorted();
+console.log("arr3 after toSorted():", arr3); // [3,1,2]  (original unchanged)
+console.log("New sorted array:", newArr3);   // [1,2,3]
+        // shift() → returns what it removes
+        // unshift() → returns new length
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

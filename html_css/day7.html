@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="web design">
+        <title>Display&Position</title>
+  z     <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        header{
+            position:fixed;
+            top:0;
+            background-color: black;
+            color:white;
+           width:100%;
+           
+          
+        }
+        body{
+           padding-top: 60px;
+        }
+        .navbar{
+           
+            display:flex;
+            justify-content: space-between;
+            padding: 14px 20px;
+            margin-left: 10px;
+        }
+        .logo{
+            font-size: 20px;
+            font-weight: 700;
+            color:white;
+            
+        }
+        nav ul{
+            display:flex;
+            list-style: none;
+            gap:20px;
+            
+        }
+        ul li a{
+            text-decoration: none;
+            font-size: 20px;
+            color:white;
+        }
+       .section1{
+        /*padding:55px 0 0 0;*/
+        position: relative;
+        width:100%;
+        height: 400px;
+     
+       }
+       .section1 img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+       }
+       .subsections {
+         position: absolute;   /* placed over image */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+         z-index: 2;           /* ABOVE image */
+        color: white;
+        font-size: 50px;
+        }
+       .course1{
+        padding:40px;;
+        display:grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap:30px;
+        
+        
+       }
+       .rel_pos{
+        position: relative;
+        background-color: rgb(216, 199, 199);
+        border-radius: 30px;
+        padding:30px;
+       }
+       .abs_pos{
+        background: crimson;
+        position:absolute;
+        top:10px;
+        right:10px;
+        color:white;
+        padding:5px 10px;
+        font-size:12px;
+       }
+       button{
+        display: inline-block;
+        margin-top: 20px;
+         padding: 10px 20px;
+       }
+        footer{
+         display:flex;
+        justify-content:space-between;
+        background-color:black;
+        color:white;
+        padding:20px;
+        }
+        .tooltip-box{
+          position: relative;
+          display: inline-block;
+        }
+        .tooltip{
+          position: absolute;
+          visibility: hidden;
+          color:red;
+          left: 0;
+          bottom: 120%;
+          padding: 5px;
+        }
+        .tooltip-box:hover .tooltip{
+          visibility: visible;
+        }
+      </style>
+    </head>
+    <body>
+        <!--header-->
+     
+      <!--2nddiv-->
+      <section class="section1">
+        <img src="image/madras.jpg" type="image/jpg" alt="mit">
+        <h1 class="subsections">Welcome</h1>
+     </section>
+     <header>
+        <div class="navbar">
+            <div class="logo">
+               <p>EduPro</p> 
+            </div>
+            <nav>
+                 <ul><li><a href="#Home">Home</a></li>
+                    <li><a href="Courses">Courses</a></li>
+                   <li><a href="Profile">Profile</a></li></ul>
+            </nav>
+        </div>
+      </header>
+     
+      <!--3rd-->
+      <section class="course1">
+            <div class="rel_pos">
+            <span class="abs_pos">NEW</span>
+            <h3>HTML Mastery</h3>
+            <button>Enroll</button>
+            
+        </div>
+        <div class="rel_pos">
+            <span class="abs_pos">HOT</span>
+            <h3>CSS Advanced</h3>
+            <button>Enroll</button>
+         </div>
+        <div class="rel_pos">
+            <span class="abs_pos">PRO</span>
+            <h3>Flex & Grid</h3>
+            <button>Enroll</button>
+      </section>
+     
+      <footer>
+        <span>© 2026 EduPro</span>
+        <span class="tooltip-box">Help
+          <span class="tooltip">Customer support</span>
+        </span>
+      </footer>
+       
+        </body>
+</html>

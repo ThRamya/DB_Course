@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form_validation">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red
+        }
+
+        .success {
+            color: green;
+        }
+
+        p {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="regform">
+        <h2>Registration</h2>
+        <div>
+            <label>Username:</label>
+            <input type="text" name="uname" id="uname">
+            <span id="usererror" class="error"  ></span>
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" name="pswd" id="pswd">
+        </div>
+        <div>
+            <label>Confirm Password</label>
+            <input type="text" name="cpswd" id="cpswd">
+            <span id="confirmerror" style="color:red; display:none">Passwords do not match!</span><br><br>
+        </div>
+        <button>Register</button>
+
+    </form>
+    <h4>Password must contain:</h4>
+
+    <p id="length" class="error">Atleast 8 characters</p>
+    <p id="upper" class="error">One Uppercase letter</p>
+    <p id="lower" class="error">One Lowercase letter</p>
+    <p id="number" class="error">One number</p>
+    <p id="special" class="error">One special character</p>
+
+    <script>
+        /*Name validation*/
+            document.getElementById("uname").addEventListener("input", function (e) {
+            const Npattern = /^[a-zA-Z]+([ \-'][a-zA-Z]+)*$/;
+            let Uname = document.getElementById("uname").value.trim();
+            let Error1=document.getElementById("usererror");
+            if (Uname === "") {
+                Error1.textContent = "It is empty!! please enter your name";
+
+            }
+            else if (!Npattern.test(Uname)) {
+                Error1.textContent = "enter alphabet value only";
+            }
+            else if (Uname.length < 3 || Uname.length > 20) {
+                 Error1.textContent = "Enter name between 3 and 20 characters";
+            }
+            
+            else {
+                Error1.textContent = "";
+            }
+        });
+        //password
+        document.getElementById("pswd").addEventListener("keyup", function () {
+            console.log("User is typing");
+            //length check
+            let password = document.getElementById("pswd").value.trim();
+            if (password.length >= 8) {
+                document.getElementById("length").classList.remove("error");
+                document.getElementById("length").classList.add("success");
+            }
+            else {
+                document.getElementById("length").classList.remove("success");
+                document.getElementById("length").classList.add("error");
+            }
+            //uppercase check
+            if (/[A-Z]/.test(password)) {
+                document.getElementById("upper").classList.remove("error");
+                document.getElementById("upper").classList.add("success");
+            }
+            else {
+                document.getElementById("upper").classList.remove("success");
+                document.getElementById("upper").classList.add("error");
+            }
+            //lowercase check
+            if (/[a-z]/.test(password)) {
+                document.getElementById("lower").classList.remove("error");
+                document.getElementById("lower").classList.add("success");
+            }
+            else {
+                document.getElementById("lower").classList.remove("success");
+                document.getElementById("lower").classList.add("error");
+            }
+            //number check
+            if (/[0-9]/.test(password)) {
+                document.getElementById("number").classList.remove("error");
+                document.getElementById("number").classList.add("success");
+            }
+            else {
+                document.getElementById("number").classList.remove("success");
+                document.getElementById("number").classList.add("error");
+            }
+            //special character check
+            if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                document.getElementById("special").classList.remove("error");
+                document.getElementById("special").classList.add("success");
+            }
+            else {
+                document.getElementById("special").classList.remove("success");
+                document.getElementById("special").classList.add("error");
+            }
+        });
+        document.getElementById("regform").addEventListener("submit", function (e) {
+            let pass = document.getElementById("pswd").value;
+            let confirmpass = document.getElementById("cpswd").value;
+            let errorspan = document.getElementById("confirmerror");
+            if (pass !== confirmpass) {
+                // Show error
+                errorspan.style.display = "inline";
+                // Stop form submission
+                e.preventDefault();
+            }
+            else {
+                errorspan.style.display = "none";
+                //alert("Submitted successfully");
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

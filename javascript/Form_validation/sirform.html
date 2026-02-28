@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form id="form_val">
+            <div>
+                <label>First Name</label>
+                <input type="text" name="first_name" id="first_name" required/>
+           </div>
+           <!--  <div>
+                <label>Second Name</label>
+                <input type="text" name="second_name" id="second_name" required />
+            </div>
+        
+             <div>
+                <label>password</label>
+                <input type="password" name="pwd" id="pwd" required />
+            
+            </div>
+        -->
+             <div>
+                <label>email</label>
+                <input type="email" name="email" id="email" required />
+            </div>
+
+             <div>
+                <label>Mobile Number</label>
+                <input type="number"  name="mobile_number" id="mobile_number" required />
+            
+            </div>
+        
+            <div>
+            
+                <input type="submit" name="submit" />
+            </div>
+        
+        
+        </form>
+
+    </section>
+    <script>
+ /* 
+    document.getElementById("form_val").addEventListener("submit", function(e){
+    e.preventDefault();  */
+//first name
+document.getElementById("first_name").addEventListener("change",function(e){
+             let fname= document.getElementById("first_name").value.trim();
+             
+             const namePattern = /^[a-zA-Z\xC0-\uFFFF\s.'-]+$/u;
+             if(fname==""){
+                alert("enter the name ")
+             }
+             else if((fname.length<3) || (fname.length>20) ){
+
+             
+                alert(" Name length between 3 to 20  ")
+             }
+             else if(!(namePattern.test(fname))){
+             alert(" enter alphabet value only  ")
+                
+             }
+             else{
+                alert("successfully")
+             }
+            });
+
+            /* email  validation */
+document.getElementById("email").addEventListener("change",function(e){
+
+    let error_mess="";
+           let email= document.getElementById("email").value.trim();
+            let email_pat= /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+             if(email==""){
+               error_mess="enter the correct email "
+             }
+             else if(!(email_pat.test(email))){
+             error_mess=" enter the correct email "
+                
+             }
+
+             if(error_mess!=""){
+                
+                    let label=document.createElement("label");
+                    label.setAttribute("id","error_label");
+                    label.style.color="red";
+                    label.innerText=error_mess;
+                    document.getElementById("email").insertAdjacentElement("afterend",label);
+                }
+            else{
+             let error_label=document.getElementById("error_label");
+                if(error_label){
+                     error_label.remove();
+                }
+
+            }
+         });
+            /* mobile number validation */
+document.getElementById("mobile_number").addEventListener("change",function(e){
+
+             let mnumber= document.getElementById("mobile_number").value.trim();
+             if(mnumber==""){
+                alert("enter the name ")
+             }
+             else if(!(mnumber.length==10) ){
+
+             
+                alert("Enter 10 degite mobile number ")
+             }
+             else{
+             alert("successfully")
+             }
+            
+            });
+
+/* 
+         document.getElementById("first_name").addEventListener("change",function ch(){
+alert(fname)
+         }) */
+//         function validatePassword(password) {
+//   const errors = [];
+//   if (password.length < 8) {
+//     errors.push("Your password must be at least 8 characters long.");
+//   }
+//   if (!(/[a-z]/.test(password))) {
+//     errors.push("Your password must contain at least one lowercase letter.");
+//   }
+//   if (!(/[A-Z]/.test(password))) {
+//     errors.push("Your password must contain at least one uppercase letter.");
+//   }
+//   if (!(/[0-9]/.test(password))) {
+//     errors.push("Your password must contain at least one digit.");
+//   }
+//   if (!(/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password))) {
+//     errors.push("Your password must contain at least one special character.");
+//   }
+
+//   if (errors.length > 0) {
+//     // You can display the errors to the user here
+//     console.log("Invalid Password:", errors.join("\n"));
+//     return false;
+//   }
+//   return true;
+// }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*arithmetic operator*/
+        var a="45";
+        var b=5;
+        console.log(a+b); //string concatination
+        console.log(a-b); //45-5=40
+        console.log(a*b);  
+        console.log(a/b);
+        console.log(a%b); //remainder
+
+        /*assignment operator*/
+        a+=6;//add and assign
+        console.log(a);  
+        a-=6;
+        console.log(a);
+        a*=6;
+        console.log(a);  
+        a/=6;
+        console.log(a); 
+        a%=6;
+        console.log(a*b);   
+
+        /*comparison operator*/
+        var a="45";
+        var b=45;
+        if(a===b){
+            console.log("equal");
+        }
+        else{
+           console.log("not equal");
+        }
+        /*logical operator*/
+        //&&-->and ||-->or
+        if((a==b)||(a<b)){
+            console.log("true");
+        }
+        if((a==b)&&(a<b)){
+            console.log("true");
+        }
+        else{
+            console.log("fail");
+        }
+        /*increment and decrement*/
+        a=47;
+        a++;
+        b=50;
+        b--;
+        console.log(a);
+        console.log(b);
+        /*exponal operator*/
+        a=4;
+        console.log(a**2); //power is 2 
+        /*conditional statement*/
+        //if ,switch
+         let day=prompt("enter"); //input
+       console.log(day);
+        
+        switch(day){
+            case "Monday":
+                console.log("monday");
+                break;
+            case "Tuesday":
+                console.log("tuesday");
+                break;
+            default:
+                console.log("not there");
+        }
+        let i=0;
+        while(i<10){
+            
+            i++;
+            if(i==5){
+                continue;   //5 not display in console check
+            }
+             console.log(i);
+            
+        }
+        for(let i=0; i<10;i++){
+            console.log(i);
+        }
+        let j=0;
+       do{
+            console.log(j);
+            j++;
+        } while(j<10)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

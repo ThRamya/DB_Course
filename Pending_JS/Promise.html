@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //A Promise is an object that represents the future result of an asynchronous operation.     
+        //three state: pending, resolved(fulfilled), rejected
+        //Promise is a built-in class provided by JavaScript itself.
+
+        //Promise → class
+        //new Promise() → object
+        //p → promise object
+
+        //p→object used to handle async work
+        //new Promise() → creates a promise
+
+        //function(resolve, reject) → callback function with 2 parameters
+        //resolve and reject are parameters, but they behave like functions.
+        //JavaScript automatically passes two functions into these parameters.
+        //So internally it is like this:
+        /* resolve = function(value) {
+            // marks promise as fulfilled
+            }
+            reject = function(error) {
+            // marks promise as rejected
+            }  */
+        /*  Type	Explanation
+            Parameter	because they are inside function(resolve, reject)
+            Function	because you can call them like resolve() reject()
+        */
+        /*proof example
+        let p = new Promise(function(resolve, reject) {
+            console.log(typeof resolve); // function
+            console.log(typeof reject);  // function
+        });*/
+
+        //Default state of a Promise is always pending.
+
+        //Promise stays pending until resolve() or reject() is called
+
+        //"Promise → object used to handle async work" refers to the object stored in p
+
+        //Async work allows JavaScript to not wait/block, making programs faster and responsive.
+
+        //.then() is a method of a Promise object
+
+        //.then() is used to handle the result when the Promise is fulfilled (success)
+
+        //.then() = “what to do when async work is successful”
+
+        //promise object contains the async result.
+
+        //.then() and .catch() belong to promise object. They are methods of the Promise object
+
+        //Basic Syntax:-   
+        let p = new Promise(function (resolve, reject) {
+            //async work here
+            let success = true;
+            if (success) {
+                resolve("Success");
+            }
+            else {
+                reject("Error");
+            }
+        });
+
+        let myPromise = new Promise(function (resolve, reject) {
+
+            let success = true;
+
+            if (success) {
+                resolve("Data received");
+            }
+            else {
+                reject("Error occurred");
+            }
+
+        });
+
+        console.log(myPromise);//o/p:=Promise {fulfilled: "Data received"}
+        //How to get result → using .then() and .catch()
+
+        //This is called chaining.
+        myPromise
+            .then(function (result) { console.log(result); })
+            .catch(function (error) { console.log(error); });
+
+        //setTimeout() is a predefined function in JavaScript.
+        //setTimeout() is used to run code after some delay (time).
+        //basic syntax: setTimeout(function, time_in_milliseconds);
+
+        //Real async example using setTimeout
+        let promise = new Promise(function (resolve, reject) {
+
+            setTimeout(function () {
+                resolve("Data received");
+            }, 2000);
+
+        });
+
+        promise
+        .then(function (result) {
+            console.log(result);
+        })
+        .catch(function(error) {
+            console.log("catch:", error);
+        })
+        .finally(function () {
+            console.log("finally: Always runs");
+        });
+        //then() waits for the Promise to complete, not directly for setTimeout(), but indirectly because setTimeout() calls resolve()
+        /*Flow:
+        
+        Promise created → pending
+        setTimeout waits 2 seconds
+        resolve() called → fulfilled
+        then() runs → prints result
+        Output after 2 seconds: Data received   
+        */
+    </script>
+</body>
+
+</html>

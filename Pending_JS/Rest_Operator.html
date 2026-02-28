@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+//Rest operator (...) is used to collect multiple values into one variable
+      /**Example with array**/
+      let arr=[10,20,30,40];
+      let[a,...b]=arr;//Rest element must be last element
+      console.log(a,b);
+      /**Example with function**/
+      function add(n,a,...number){
+          console.log(n,a,number);
+      }
+      add(10,30,67,89);
+      /**Real example: sum of numbers**/
+      function sum(...nums){
+            let total = 0;
+            for(let n of nums){
+            total += n;
+            }
+            console.log(total);
+            }
+            sum(10,20,30);
+/**Object rest operator**/
+            let obj = {name:"Ramya",
+                       age: 25,
+                       city:"Chennai"
+                      };
+            let {name, ...rest} = obj;
+            console.log(name,rest);
+            /**Example showing both:**/
+            let arr11 = [1, 2, 3, 4];
+            let copy = [...arr11];   // spread
+            let [a1, ...b1] = arr11;    // rest
+            console.log(copy,b1);
+            
+ </script>   
+</body>
+</html>

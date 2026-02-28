@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(a,b){
+            return console.log(a+b);
+        }
+        add(4,5);
+        //arrow function (fat arrow)
+        let add1=(a,b)=>console.log(a+b);
+        add1(5,5);
+        let add2=()=>{
+            console.log(3+3);
+        }
+         add2();
+        let add3=(a)=>{
+            console.log(a);
+
+        }
+       add3(10)
+       let array1=[29,60,89]
+       tot=0;
+    //    let tot=0;
+    //    array1.forEach(function sum(val){
+    //       tot=tot+val;
+    //    } )
+    //    console.log(tot);
+       array1.forEach((val)=>
+    {
+      tot+=val;
+    })
+     console.log(tot);
+     //map
+     let d=array1.map(function (v){
+        return v*10;
+     }) 
+     console.log(d);
+     let e=array1.map((c)=>{
+      return c*10;
+         })
+          console.log(e);
+    //object used with map()
+    let obj=[{name:"Ramya",age:26},{name:"Radhika",age:28}];
+    let obj_names=obj.map((val)=>val.name);
+    console.log(obj_names);
+
+    obj.forEach(v=>console.log(v.name+" "+v.age));
+    
+    </script>
+</body>
+</html>

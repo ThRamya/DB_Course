@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         console.log(a);
+    var a=10;//hoisting
+    console.log(b);
+    let b=20;// temporal dead zone
+    console.log(c); //already declare
+    const c=10;// temporal dead zone and already initialize
+        console.log("javascript");
+        console.log(5+6);
+        alert("hai");
+
+    </script>
+    
+</head>
+<body>
+    <div>
+        <p id="demo">
+         ramya
+        </p>
+        <img id="img_element" src="image/Swimming.jpg">
+        <hr>
+        <img id="img_element" src="">
+        
+    </div>
+    <script>
+        document.getElementById("demo").innerText="Hello world";
+        document.getElementById("demo").style.backgroundColor="red";
+        document.getElementById("img_element").setAttribute("src","image/Swimming.jpg");
+        console.log(document.getElementById("img_element").getAttribute("src"))
+    </script>
+   
+</body>
+</html>

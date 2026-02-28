@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table border="1" id="table1">
+    <tr>
+      <th>Name</th>
+      <th>age</th>
+      <th>course</th>
+    </tr>
+  </table>
+
+  <h2>Student Table</h2>
+  <div id="container"></div>
+
+  <h2>Ice Cream</h2>
+  <ul id="icecreams"></ul>
+
+  <h2>Fruits</h2>
+  
+
+  <script>
+    let table = document.getElementById("table1");
+    let students = [{ name: "Ramya", age: 26, course: "Maths" },
+    { name: "Radhika", age: 31, course: "English" },
+    { name: "Rathna", age: 29, course: "Science" }
+    ]
+    students.forEach(function (student) {
+      let row = table.insertRow();
+      row.insertCell(0).innerHTML = student.name;
+      row.insertCell(1).innerHTML = student.age;
+      row.insertCell(2).innerHTML = student.course;
+    });
+    //data
+    let stud = [{ name: "Ram", age: 26, course: "Maths" },
+    { name: "Radha", age: 31, course: "English" },
+    { name: "Rathi", age: 29, course: "Science" }
+    ]
+    //create table
+    let table1 = document.createElement("table");
+    table1.border = "1";
+    //create table header row
+    let headerRow = table1.insertRow();//tr
+
+    let th1 = document.createElement("th");
+    th1.innerText = "Name";
+    headerRow.appendChild(th1);
+
+    let th2 = document.createElement("th");
+    th2.innerText = "Age";
+    headerRow.appendChild(th2);
+
+    let th3 = document.createElement("th");
+    th3.innerText = "Course";
+    headerRow.appendChild(th3);
+
+    //add data rows
+    stud.forEach(function (stud1) {
+      let row = table1.insertRow();
+      row.insertCell(0).innerHTML = stud1.name;
+      row.insertCell(1).innerHTML = stud1.age;
+      row.insertCell(2).innerHTML = stud1.course;
+    });
+    //add a table to html
+    document.getElementById("container").appendChild(table1);
+    //list
+    let flavour=document.getElementById("icecreams");
+    let list1=document.createElement("li");
+    list1.innerHTML="Vanilla"
+    flavour.appendChild(list1);
+    let list2=document.createElement("li");
+    list2.innerHTML="Strawberry";
+    flavour.appendChild(list2);
+    let list3=document.createElement("li");
+    list3.innerHTML="chocobar";
+    flavour.appendChild(list3);
+    
+   //unorderlist
+    let unorderlist = document.createElement("ul");
+    let li1 = document.createElement("li");
+    li1.innerHTML = "Apple"
+    unorderlist.appendChild(li1);
+    let li2 = document.createElement("li");
+    li2.innerHTML = "Mango"
+    unorderlist.appendChild(li2);
+    document.body.appendChild(unorderlist);
+
+  </script>
+</body>
+
+</html>

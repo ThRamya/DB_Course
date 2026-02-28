@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Check</title>
+</head>
+<body>
+
+<h3>Select Student</h3>
+
+<select id="studentSelect">
+    <option value="">--Select Student--</option>
+</select>
+
+<br><br>
+
+Enter Grade:
+<input type="text" id="gradeInput">
+
+<br><br>
+
+<button onclick="checkGrade()">Check</button>
+
+<p id="result"></p>
+
+<script>
+
+let students = [
+  {name:"Ramya", grade:"A"},
+  {name:"John", grade:"B"},
+  {name:"Abi", grade:"A"},
+  {name:"Priya", grade:"A"},
+  {name:"Arun", grade:"B"},
+  {name:"Kumar", grade:"A"},
+  {name:"Divya", grade:"A"},
+  {name:"Ravi", grade:"B"},
+  {name:"Meena", grade:"A"},
+  {name:"Siva", grade:"A"},
+  {name:"Anu", grade:"B"},
+  {name:"Vijay", grade:"A"},
+  {name:"Ajith", grade:"A"},
+  {name:"Surya", grade:"B"},
+  {name:"Karthi", grade:"A"},
+  {name:"Nisha", grade:"A"},
+  {name:"Hari", grade:"B"},
+  {name:"Devi", grade:"A"},
+  {name:"Mani", grade:"A"},
+  {name:"Bala", grade:"B"},
+  {name:"Kavi", grade:"A"},
+  {name:"Reena", grade:"A"},
+  {name:"Sam", grade:"B"},
+  {name:"Raj", grade:"A"},
+  {name:"Latha", grade:"A"},
+  {name:"Vani", grade:"B"},
+  {name:"Gopi", grade:"A"},
+  {name:"Naveen", grade:"A"},
+  {name:"Sara", grade:"B"},
+  {name:"Leo", grade:"A"}
+];
+
+// fill select option
+let select = document.getElementById("studentSelect");
+
+for(let i=0; i<students.length; i++){
+    let option = document.createElement("option");
+    option.value = students[i].name;
+    option.text = students[i].name;
+    select.appendChild(option);
+}
+
+// check function
+function checkGrade(){
+
+    let selectedName = document.getElementById("studentSelect").value;
+    let enteredGrade = document.getElementById("gradeInput").value;
+
+    let foundGrade = "";
+
+    for(let i=0; i<students.length; i++){
+
+        if(students[i].name === selectedName){
+            foundGrade = students[i].grade;
+            break;
+        }
+
+    }
+
+    if(foundGrade === enteredGrade){
+        document.getElementById("result").innerHTML = "Right ✅";
+    }
+    else{
+        document.getElementById("result").innerHTML = "Wrong ❌";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

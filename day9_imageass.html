@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container{
+        display:flex;
+        flex-wrap: wrap;
+        padding: 3% 2%;/*3% → top & bottom padding,2% → left & right padding*/
+      }
+      img{
+        width:300px;
+        height:215px;
+        object-fit:cover;
+        object-position: 50% 65%; /*x-axis y-axis*/
+      }
+      .name_hold{
+        min-width: 200px;
+      }
+      .items{
+        margin:0% 2% ;
+        background-color: white;
+        box-shadow: 0px 0px 8px 1px #dcd8d8;
+
+      }
+      p{
+        display:inline-block;
+        width:48%;
+        padding-left: 35%;
+      }
+      .img_hold img{
+        width:100%;
+        clip-path:circle(50%);
+        clip-path: circle(50% at left);
+        clip-path:ellipse(55% 40% at right); /*55%-->Horizontal radius (width of ellipse), 30%-->Vertical radius (height of ellipse)*/
+        clip-path:polygon(50% 0%,100% 50%,50% 100%, 50% 0%); /*clip-path: polygon(x1 y1, x2 y2, x3 y3, ...);*/
+        filter:blur(2px);
+        filter:brightness(87%) contrast(141%);
+        filter:contrast(119%);
+        filter:drop-shadow(2px 4px 6px pink);
+        filter:hue-rotate(113deg);
+        filter:saturate(6);
+        filter:sepia(6);
+        filter:invert(1);
+        filter:grayscale(5);
+    }
+    .img_hold{
+        max-height: 200px;
+
+    }
+    .hydrate h1{
+            text-align: center;
+            column-span:all; /* column-span:all--> element took full width*/
+        }
+        .hydrate{
+            column-count: 3; /*divide a column to 3*/
+            column-gap: 20px;
+            column-width: 200px;
+            column-rule-style:dashed;
+            column-rule-color:aquamarine;
+            column-rule-width:4px;
+            /* for instead of 3 property:value go with-->column-rule:2px solid red*/
+       }
+      
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="items">
+            <div class="img_hold">
+                <img src="image/Kan.jpg">                
+            </div>
+            <div class="name_hold">
+                <p>Kangana Ranaut</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="img_hold">
+                <img src="image/vikram.jpg">                
+            </div>
+            <div class="name_hold">
+                <p>Vikram</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="img_hold">
+                <img src="image/Bhag.jpg">                
+            </div>
+            <div class="name_hold"> 
+                <p>Bhagyashree</p>
+            </div>
+        </div>
+    </section>
+    <h1>Water</h1>
+    <div class="hydrate">
+    <h1>Hydration</h1>
+        Water is a colorless, odorless, and tasteless inorganic substance essential for all known forms of life, 
+        covering roughly 71% of the Earth's surface. Composed of two hydrogen atoms and one oxygen atom 
+        (\(\text{H}_{2}\text{O}\)), it acts as a universal solvent and constitutes a major portion of living 
+        organisms, including 70% of the human body. Beyond sustaining life through hydration, it is crucial for 
+        agriculture, industry, and climate regulation. While abundant on the planet, only a small, 
+        finite percentage is freshwater suitable for consumption, making its conservation vital to combat scarcity.
+    
+    </div>
+</body>
+</html>

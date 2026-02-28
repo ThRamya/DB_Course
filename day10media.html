@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color:Red;
+            }
+        .title{
+            font-size: 6rem;
+        }
+        .subtitle{
+            font-size: 4rem;
+        }
+        @media all and (max-width:400px){
+            body{
+                color:orange;
+            }
+        }
+       
+        @media(orientation: landscape) and (max-width:500px){
+            .title{
+                color:green;
+            }
+        }
+        @media(orientation: portrait){
+            .subtitle{
+                color:yellow;
+            }
+        }
+        @media print{
+             .title{
+                color:green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="title">Title</p>
+    <p class="subtitle">Subtitle</p>
+</body>
+</html>

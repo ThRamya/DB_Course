@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .firstcol{
+            display:inline-block;
+            background-color: blue;
+            height:300px;
+            width:50%;
+        }
+       
+        .seccol{
+            display:inline-block;
+            background-color: green;
+            height:300px;
+            width:48%;
+        }
+        .fcol{
+             display:inline-block;
+            background-color: blue;
+            height:300px;
+            width:50%;
+
+        }
+        .sscol{
+             display:i;
+            background-color: blue;
+            height:300px;
+            width:50%;
+
+        }
+        .container{
+            display:flex;
+        }
+        .gridcont{
+            display:grid;
+            grid-template-columns: auto auto auto auto;
+            grid: auto rows 40px;
+        }
+        .fitem{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+       .overflow1{
+        overflow:hidden;
+        height:150px;
+        width:200px;
+        background-color: yellow;
+
+       }
+       .overflow2{
+        overflow:auto;
+height:150px;
+        width:200px;
+        background-color: red;
+       }
+       .overflow3{
+        overflow:visible;
+height:150px;
+        width:200px;
+        background-color: orange;
+       }
+    </style>
+</head>
+<body>
+    <div class="firstcol">
+    <h1>heading1</h1></div>
+    <div class="seccol">
+        <h2>heading2</h2></div>
+        <div class="container">
+            <div class="fcol">
+            <h1>heading1</h1></div>
+            <div class="sscol">
+             <h2>heading2</h2></div>
+            <div class="firstcol">
+            <h1>heading1</h1></div>
+            <div class="seccol">
+             <h2>heading2</h2>
+        </div></div>
+        <div class="gridcont">
+            <div class="fitem">
+            <h1>heading1</h1></div>
+            <div class="">
+             <h2>heading2</h2></div>
+            <div class="">
+            <h1>heading1</h1></div>
+            <div class="">
+             <h2>heading2</h2></div>
+             <div class="">
+            <h1>heading1</h1></div>
+            <div class="">
+             <h2>heading2</h2></div>
+            <div class="">
+            <h1>heading1</h1></div>
+            <div class="">
+             <h2>heading2</h2></div>
+
+
+        </div>
+ 
+        <span>span1</span>
+        <p class="overflow1">Because the image has a z-index of -1, it will be placed behind the text.
+            Because the image has a z-index of -1, it will be placed behind the text.
+            Because the image has a z-index of -1, it will be placed behind the text.
+            Because the image has a z-index of -1, it will be placed behind the text.
+        </p>
+    <p class="overflow2">Because the image has a z-index of -1, it will be placed behind the text.
+        Because the image has a z-index of -1, it will be placed behind the text.
+            Because the image has a z-index of -1, it will be placed behind the text.
+            Because the image has a z-index of -1, it will be placed behind the text.
+    </p>
+    <p class="overflow3">Because the image has a z-index of -1, it will be placed behind the text.
+        Because the image has a z-index of -1, it will be placed behind the text.
+            Because the image has a z-index of -1, it will be placed behind the text.
+            Because the image has a z-index of -1, it will be placed behind the text.
+    </p>
+    
+</body>
+</html>

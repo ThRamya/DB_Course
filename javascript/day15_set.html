@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validation</title>
+    <style> 
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Password Validation</h2>
+
+<input type="password" id="pswd" placeholder="Enter password">
+
+<h4>Password must contain:</h4>
+
+<!-- Only content, no id, no class -->
+<p>Atleast 8 characters</p>
+<p>One Uppercase letter</p>
+<p>One Lowercase letter</p>
+<p>One number</p>
+<p>One special character</p>
+
+<script>
+
+// Select all <p>
+let allP = document.querySelectorAll("p");
+
+// Add id and default class dynamically
+allP[0].setAttribute("id", "length");
+allP[0].setAttribute("class", "error");
+
+allP[1].setAttribute("id", "upper");
+allP[1].setAttribute("class", "error");
+
+allP[2].setAttribute("id", "lower");
+allP[2].setAttribute("class", "error");
+
+allP[3].setAttribute("id", "number");
+allP[3].setAttribute("class", "error");
+
+allP[4].setAttribute("id", "special");
+allP[4].setAttribute("class", "error");
+
+
+// Password validation
+document.getElementById("pswd").addEventListener("keyup", function () {
+
+    let password = this.value.trim();
+
+    document.getElementById("length")
+        .setAttribute("class", password.length >= 8 ? "success" : "error");
+
+    document.getElementById("upper")
+        .setAttribute("class", /[A-Z]/.test(password) ? "success" : "error");
+
+    document.getElementById("lower")
+        .setAttribute("class", /[a-z]/.test(password) ? "success" : "error");
+
+    document.getElementById("number")
+        .setAttribute("class", /[0-9]/.test(password) ? "success" : "error");
+
+    document.getElementById("special")
+        .setAttribute("class", /[@$!%*?&]/.test(password) ? "success" : "error");
+});
+
+</script>
+
+</body>
+</html>

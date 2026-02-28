@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head> 
+<body>
+    <p id="demo">paragrap</p>
+    <div class="details">
+	<table border="2" id="draggable">
+		<tr>
+			<td>Fullname</td>
+			<td><span id="fullname"></span></td>
+			<td><button id=""> edit </button></td>
+        </tr>
+			
+		<tr>
+		<td>ID</td>
+		<td><span id="age"></span></td>
+		</tr>
+		<tr>
+		<td>Login</td>
+		<td><span id="login"></span></td>
+		</tr>
+		<tr>
+		<td>Location</td>
+		<td><span id="location"></span></td>
+		</tr>
+		<tr>
+		<td>Company</td>
+		<td><span id="company"></span></td>
+		</tr>
+	</table>
+	</div>
+
+
+<script>
+    $(document).ready(function(){
+        $.ajax({
+        url :"https://api.github.com/users/anuradha9712",
+        type :"GET",
+        success: function(e){
+        let {id,location,name,login,company}=e;
+        document.querySelector("#fullname").innerText=name;   
+        document.querySelector("#age").innerText=id;   
+        document.querySelector("#company").innerText=company;   
+        document.querySelector("#login").innerText=login;   
+        document.querySelector("#location").innerText=location;   
+    },
+        error: function(e){console.log(e);}
+
+});
+
+        axios.get("https://api.github.com/users/anuradha9712")
+        .then((re)=>{console.log(re)})
+        .catch((er)=>{
+            console.log(er);
+        })
+        /*         $("#demo").hover(function(){
+                    $("#demo").hide();
+                })
+
+        */    })
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <div class="details">
+	<table border="2" id="draggable">
+		<tr>
+			<td>Fullname</td>
+			<td><span id="fullname"></span></td>
+			<td><button id=""> edit </button></td>
+        </tr>
+			
+		<tr>
+		<td>ID</td>
+		<td><span id="age"></span></td>
+		</tr>
+		<tr>
+		<td>Login</td>
+		<td><span id="login"></span></td>
+		</tr>
+		<tr>
+		<td>Location</td>
+		<td><span id="location"></span></td>
+		</tr>
+		<tr>
+		<td>Company</td>
+		<td><span id="company"></span></td>
+		</tr>
+	</table>
+	</div>
+<script>
+         
+        let obj={
+            fname:"raj",
+            age:24
+        }
+      /*  let json_obj={
+            "fname":"raj",
+            "age":24
+        }
+        console.log(obj)
+        console.log(json_obj);
+
+       let jobj= JSON.parseInt(json_obj)
+       console.log(jobj) */
+      
+       let xre=new XMLHttpRequest();
+        xre.open("GET", "https://api.github.com/users/anuradha9712",true);
+        xre.onload=function(e){
+            let result_Data =e.target.responseText;
+            let data=JSON.parse(result_Data)
+            let {id,location,name,login,company}=data;
+            document.querySelector("#fullname").innerText=name;   
+            document.querySelector("#age").innerText=id;   
+            document.querySelector("#company").innerText=company;   
+            document.querySelector("#login").innerText=login;   
+            document.querySelector("#location").innerText=location;   
+    
+            }
+        xre.send();
+    </script>
+</body>
+</html>

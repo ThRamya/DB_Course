@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //AJAX = Asynchronous JavaScript and XML
+        //AJAX is a technique, not a library or object.It is a method or approach to make web pages more dynamic.
+        // It allows web pages to update asynchronously by exchanging data with the server behind the scenes.
+        // XHR is the main tool used to implement AJAX.
+        // So basically:
+        // AJAX = XHR + JavaScript + HTML + JSON (or XML)
+
+        //Everything in this function is part of AJAX:
+        // XMLHttpRequest() → the tool to make the request
+        // xhr.open(..., true) → makes the request asynchronous
+        // xhr.send() → sends the request without reloading the page
+        // xhr.onload + JSON.parse → handles the server response
+        // So the entire loadUser() function is an example of AJAX.
+
+        function loadUser() {
+            var xhr = new XMLHttpRequest();       // XHR object
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/users/1", true); // async request
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var user = JSON.parse(xhr.responseText); // process JSON response
+                    console.log("User name:", user.name);
+                }
+            };
+            xhr.send();                             // send request
+        }
+        loadUser();
+    </script>
+</body> 
+
+</html>

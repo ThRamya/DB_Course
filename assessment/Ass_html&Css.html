@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FINAL ASSESSMENT FOR HTML AND CSS">
+    <title>Tech Event Registration Webpage</title>
+    <link rel="icon" type="image/type" href="../image/html_css.jpg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        nav {
+            background-color: cadetblue;
+            padding: 20px;
+            position: fixed;
+            /* top:0;
+            left:0; */
+            width: 100%;
+        }
+
+        nav ul {
+            font-size: 20px;
+            font-family: fantasy;
+            list-style-type: none;
+            margin-left: 60%;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: white;
+            color: cadetblue;
+        }
+
+        /*Hero Section*/
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../image/welcome4.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 70vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 80px;
+        }
+
+        .head {
+            color: white;
+            font-style: italic;
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+
+        .para {
+            margin: 40px;
+            font-size: 20px;
+            color: rgb(131, 214, 216);
+            font-style: italic;
+
+        }
+
+        /*Event Features Section (3 Boxes)*/
+        .event {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+
+
+
+        }
+
+        .div1 {
+            height: 150px;
+            width: 300px;
+            background-color: rgb(130, 201, 199);
+            color: white;
+            margin: 50px;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            border: black 5px solid;
+            box-shadow: 5px 5px 10px gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+            letter-spacing: 2px;
+            font-size: 35px;
+        }
+
+        /*Image Gallery*/
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: paleturquoise;
+        }
+
+        .img1 {
+            width: 370px;
+            height: 200px;
+            object-fit: cover;
+            gap: 10px;
+            margin: 20px;
+            border-radius: 60px;
+            cursor: pointer;
+        }
+
+        .img1:hover {
+            transform: translateY(4px);
+            box-shadow: 5px 5px 10px black;
+        }
+
+        /*Registration Table */
+        .table1 {
+            margin: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .table1 h1 {
+
+            color: rgb(6, 89, 92);
+            letter-spacing: 2px;
+
+        }
+
+        table {
+            margin: 30px;
+            border: solid black 2px;
+        }
+
+        table tr th {
+            background-color: cadetblue;
+            color: white;
+
+
+        }
+
+        th,
+        td {
+            padding: 20px;
+            letter-spacing: 2px;
+            font-style: italic;
+            font-size: larger;
+            border: solid black 2px;
+        }
+
+        td:hover {
+            background-color: rgb(99, 155, 155);
+        }
+
+        /* Register Button with Animation */
+        .sec {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: rgb(28, 73, 75);
+            border-radius: 30px;
+            color: white;
+            padding: 20px;
+            animation: move 3s ease-in-out infinite;
+            cursor: pointer;
+            font-size: large;
+            font-style: italic;
+
+        }
+
+        .btn:hover {
+            transform: scale(1.2);
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        @keyframes move {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+        /*Footer*/
+        .foot {
+            font-weight: 700;
+            text-align: center;
+            margin: 20px;
+            font-style: italic;
+            color: darkslategrey
+        }
+
+        /*Extra*/
+
+        .btn1 {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            opacity: 50%;
+            background-color: rgb(15, 99, 99);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn1:hover {
+            opacity: 80%;
+            transform: scale(1.2);
+            box-shadow: 2px 2px 10px gray;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width:1211px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .img:hover {
+                transform: scaleY(3px);
+                box-shadow: 3px 3px 6px black;
+            }
+
+        }
+        @media screen and (max-width: 789px) {
+            nav ul li {
+
+                margin-right: 0px;
+                ;
+                padding: 0px;
+                font-size: 13px;
+                margin-left: 0px;
+            }
+
+            .head,
+            .para {
+                font-size: 14px;
+                margin: 0px;
+            }
+
+            .event {
+                flex-direction: column;
+            }
+
+            .div1 {
+                height: 100px;
+                width: 200px;
+                padding: 0px;
+                border-radius: 16px;
+                margin-left: 50px;
+                font-size: 10px;
+                box-shadow: 1px 1px 5px gray;
+                margin-top: 10px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .img1 {
+                width: 200px;
+                height: 100px;
+                object-fit: cover;
+                gap: 10px;
+                margin-left: 20px;
+                border-radius: 30px;
+            }
+
+            .table {
+                margin: 0px;
+
+            }
+
+            table {
+                margin: 0px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                letter-spacing: 1px;
+                font-size: small;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <ul>
+                <li>Home |</li>
+                <li>Events |</li>
+                <li>Register |</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+    </section>
+    <!-- hero-section -->
+    <section class="hero">
+        <h1 class="head">Tech Event Registration Webpage</h1>
+        <p class="para">The Tech Event Registration Webpage is a responsive and user-friendly website developed using
+            HTML and CSS. It is designed to provide complete information about a technical event and allow participants
+            to register easily online. The webpage includes a structured navigation bar with sections such as Home,
+            Events, Register, and Contact. A visually appealing hero section with a background image enhances the
+            overall design. The registration section collects user details through a form, while the contact section
+            provides essential communication information. The layout is clean, organized, and professional, ensuring a
+            smooth browsing experience across different devices and screen sizes.
+        </p>
+    </section>
+    <section class="event">
+        <!-- Event Features Section -->
+        <div class="div1">Coding Contest</div>
+        <div class="div1">Robotics Show</div>
+        <div class="div1">AI Workshop</div>
+    </section>
+    <!-- Image Gallery -->
+    <section class="gallery">
+        <img class="img1" src="../image/event1.jpg">
+        <img class="img1" src="../image/event2.jpg">
+        <img class="img1" src="../image/event3.jpg">
+        <img class="img1" src="../image/event4.jpg">
+        <img class="img1" src="../image/event5.jpg">
+        <img class="img1" src="../image/event6.jpg">
+    </section>
+    <!-- Registration Table -->
+    <section class="table1">
+        <div>
+            <h1>Event Schedule</h1>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Venue</th>
+                </tr>
+                <tr>
+                    <td>Inaguration</td>
+                    <td>19-02-2026</td>
+                    <td>10.00am</td>
+                    <td>Seminar Hall</td>
+                </tr>
+                <tr>
+                    <td>Debate</td>
+                    <td>19-02-2026</td>
+                    <td>11.00am</td>
+                    <td>IT Lab</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <!-- Register Button with Animation -->
+    <section class="sec">
+        <button class="btn">Register Now</button>
+    </section>
+    <!-- Footer -->
+    <section class="foot">
+        <p>Contact Us</p>
+        <p>ramyachandra.nec@gmail.com</p>
+        <p>+91 8248375321</p>
+    </section>
+    <!-- Extra -->
+    <section class="sec1">
+        <button class="btn1">Help!</button>
+    </section>
+
+</body>
+
+</html>

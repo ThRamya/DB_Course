@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<!--<body onload="toloadapage()">
+     /*<input type="text"
+       oninput="console.log('input')"
+       onchange="console.log('change')"
+       onblur="console.log('blur')"> */
+    <button onclick="clicked()">click here</button>
+    <button ondblclick="doubleclicked()">double click here</button>
+    <input type="text" onchange="changed()">
+    <input type="text" onblur="blured()">
+    <input type="text" oninput="inputcheck()">
+    <label onmouseenter="mouseenter()">hello</label>
+    <label ></label>
+ <script>
+         function doubleclicked(){
+            alert("I doubled clicked button");
+        }
+        function clicked(){
+            alert("I clicked button");
+        }
+        function changed(){
+            alert("written your name");
+        }
+        function blured(){
+            alert("Input lost focus");
+        }
+         function inputcheck(){
+            alert("Immediate changes in input");
+        } 
+        function toloadapage(){
+            alert("to check the browser is loaded");
+        }
+        function mouseenter(){
+            alert("cursor touched the word");
+        }
+        
+    </script>
+</body> -->
+
+<body>
+    <button id="buttn">click here</button>
+    <button id="buttn1">click here</button>
+    <button id="buttn2">click here</button>
+    <button id="buttn3">click here</button>
+    <button id="buttn4">click here</button>
+    <input type="text" id="int">
+    <label id="lbl">hello</label>
+    <div id="div1" style="width:200px;height:100px;background-color: aqua;"></div>
+    <script>
+
+        //     function changed(){
+        //         alert("written your name");
+        //     }
+        //     function mouseenter(){
+        //         alert("cursor touched the word");
+        //     }
+        /**one method**/
+        document.getElementById("buttn").addEventListener("click", function () {
+            alert("ramya");
+        });
+        /**2nd method**/
+        function clicked() {
+            alert("I clicked button");
+        }
+        document.getElementById("buttn1").addEventListener("click", clicked);
+        document.getElementById("buttn3").addEventListener("mouseout", function () {
+            alert("mouse moveout")
+        });
+
+        /**3rd method**/
+        document.getElementById("buttn2").addEventListener("click", () => { alert("used arrow function") });
+        /**4th method**/
+        document.getElementById("buttn3").addEventListener("click", function () {
+            //clicked();
+            console.log("Hi Ramya");
+        });
+        /**variable used here**/
+        var newbutton = document.getElementById("buttn4");
+        newbutton.onclick = function dblclick() {
+            alert("Double clicked");
+        }
+        var div11 = document.getElementById("div1");
+        div11.addEventListener("mouseover", function () {
+            div11.style.backgroundColor = "red";
+        });
+        div11.addEventListener("mouseout", function () {
+            div11.style.backgroundColor = "aqua";   // resets to original CSS color
+        });
+
+        div11.addEventListener("mouseenter", function () {
+            div11.style.width = "300px";
+        });
+        div11.addEventListener("mouseout", function () {
+            alert("mouse moveout")
+        });
+        
+
+
+    </script>
+
+</body>
+
+</html>

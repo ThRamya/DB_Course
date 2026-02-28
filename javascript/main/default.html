@@ -1,0 +1,96 @@
+
+✅ CSS Default Values Cheat Sheet
+🎯 1. Display & Visibility
+display: inline;          /* Most elements */
+display: block;           /* div, p, h1-h6, section etc */
+visibility: visible;
+overflow: visible;
+
+🎨 2. Text & Font
+color: initial;           /* Browser default (usually black) */
+font-family: initial;     /* Browser default (Times New Roman usually) */
+font-size: medium;        /* Usually 16px */
+font-style: normal;
+font-weight: normal;      /* 400 */
+text-align: start;        /* left in LTR */
+text-decoration: none;
+text-transform: none;
+line-height: normal;
+letter-spacing: normal;
+word-spacing: normal;
+white-space: normal;
+
+📦 3. Box Model
+margin: 0;                /* Default for most elements */
+padding: 0;
+border: none;             /* border-width: medium, border-style: none */
+box-sizing: content-box;
+width: auto;
+height: auto;
+
+
+⚠️ Note: Some elements like body have default margin (usually 8px).
+
+📍 4. Positioning
+position: static;
+top: auto;
+right: auto;
+bottom: auto;
+left: auto;
+z-index: auto;
+float: none;
+clear: none;
+
+🖼 5. Background
+background-color: transparent;
+background-image: none;
+background-repeat: repeat;
+background-position: 0% 0%;
+background-size: auto;
+background-attachment: scroll;
+
+📐 6. Flexbox Defaults
+display: block;       /* Until you set display:flex */
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-items: stretch;
+align-content: stretch;
+
+📊 7. Grid Defaults
+display: block;       /* Until you set display:grid */
+grid-template-columns: none;
+grid-template-rows: none;
+grid-auto-flow: row;
+
+🧩 8. List Defaults
+list-style-type: disc;
+list-style-position: outside;
+list-style-image: none;
+
+🧭 9. Table Defaults
+border-collapse: separate;
+border-spacing: 2px;
+table-layout: auto;
+
+🔥 Important Concept You Must Know
+
+There are 3 common default keywords in CSS:
+
+initial   /* Sets property to CSS defined default */
+inherit   /* Takes value from parent */
+unset     /* Acts like inherit or initial depending on property */
+revert    /* Resets to browser default */
+
+💡 Very Important (For Interviews)
+
+👉 Browsers apply User Agent Stylesheet (hidden default CSS).
+That’s why:
+
+h1 is bold
+
+p has margin
+
+ul has bullets
+
+body has 8px margin

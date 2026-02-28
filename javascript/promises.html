@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+        // function a(d){
+        //     function b(d){
+                
+        //         function c(d){
+        //             //callback hell
+        //             console.log("hai"+d);
+        //         }
+        //     }
+        // }
+        // a(4);
+       
+        // let p=new Promise(()=>{
+        //     let a=45;
+        //     let b="45";
+        //     if(a==b){
+        //         // resolve("success")
+        //     }
+        //     else{
+        //         // reject("failure");
+        //     }
+        // });
+        //console.log(p);
+        //regression oru function la same fucntion again and call panrathu
+    
+    let p2=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+       resolve("success");
+    },3000);
+    });
+    console.log(p2);
+    console.log("hello");
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //async is a keyword used before a function.
+        //It makes the function always return a Promise.
+        async function test1() {
+            return "Hello";
+        }
+        console.log(test1());//Promise {<fulfilled>: 'Hello'}
+
+        //await is used to wait for a Promise to complete.
+        //It pauses the function until Promise resolves.
+        // step1 function returns a Promise
+        //ex1:
+        function step1() {
+            return new Promise(function (resolve, reject) {
+                console.log("step1 executed");
+                resolve(10);
+            });
+        }
+
+
+        // async function run
+        async function run() {
+
+            console.log("run started");
+
+            // await step1
+            let result = await step1();
+            console.log("after step1:", result);
+
+            // chaining logic manually
+            result = result + 10;
+            console.log("after adding 10:", result);
+
+            result = result + 10;
+            console.log("after adding another 10:", result);
+
+            console.log("final result:", result);
+
+
+        }
+
+        // call run
+        run();
+
+        //ex2 with chaining method
+        // function step2() {
+        //     console.log("step2 function started");
+        //     return new Promise(function (resolve, reject) {
+        //         console.log("step2 executed");
+        //         resolve(10);
+        //     });
+        // }
+
+        // step2()
+        //     .then(result => {
+        //         console.log("after step2:", result);
+        //         return result + 10;
+        //     })
+        //     .then(result => {
+        //         console.log("after adding 10:", result);
+        //         return result + 10;
+        //     })
+        //     .then(result => {
+        //         console.log("final result:", result);
+        //     });
+
+        //ex3:
+        // with arrow function
+        // wait function returning a Promise
+        // function wait(ms) {
+        //     return new Promise(function (resolve) {
+        //         setTimeout(function () {
+        //             resolve();
+        //         }, ms);
+        //     });
+        // }
+
+        // // async countdown function
+        // async function countdown() {
+
+        //     console.log("1");
+        //     await wait(1000);
+
+        //     console.log("2");
+        //     await wait(1000);
+
+        //     console.log("3");
+
+        // }
+
+        // // call countdown
+        // countdown();
+    </script>
+</body>
+
+</html>

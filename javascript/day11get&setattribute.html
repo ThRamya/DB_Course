@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .redText {
+            color: red;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="para">Hello java</p>
+
+    <img id="pic" src="../image/discussion.avif" alt="discussion">
+    <button id="btn">click me</button>
+    <script>
+        let i = document.getElementById("pic");
+        let a = i.getAttribute("src"); //getAttribute
+        console.log(a);
+        i.setAttribute("src", "../image/sap_campus.jpg") //setattribute
+
+        let b = document.getElementById("btn");
+        //b.setAttribute("disabled","true");
+        let c = document.getElementById("para");
+        c.setAttribute("class", "redText");
+        console.log(c);
+        let className = c.getAttribute("class");
+        console.log(className);
+         c.removeAttribute("class");
+          console.log(c);
+
+    </script>
+</body>
+
+</html>

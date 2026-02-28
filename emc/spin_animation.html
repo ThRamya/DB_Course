@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .loader{
+        width:100px;
+        height:100px;
+        /* background-color: lightgreen; */
+        border:5px solid black;
+        border-top:8px solid blue;
+        background-color: yellow;
+
+        border-radius:50%;
+        margin:50px;
+        animation:spin 3s linear infinite;
+        /* transform:rotate(45deg); */
+       
+    }
+    .loader:hover{
+        transform:translateY(4);
+        box-shadow: 5px 5px 10px gray;
+    }
+     @keyframes spin{
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+        /* @keyframes spin → defines HOW to spin
+           animation: spin → tells THIS element to spin */
+
+
+</style>
+</head>
+<body>
+    <div class="loader">
+
+    </div>
+</body>
+</html>

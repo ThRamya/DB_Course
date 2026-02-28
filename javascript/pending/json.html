@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let xre=new XMLHttpRequest();
+        xre.open("GET", "https://api.github.com/users/anuradha9712",true);
+        xre.onload=function(e){
+            console.log(e)
+            console.log(e.target.responseText)
+
+        }
+        xre.send();
+        // let x=new XMLHttpRequest();//object create
+        // x.open(); //url request set,get,post -method  backend file ula(php coding)
+        //  x.onload=function(){};
+        // x.send(); //dataset post get
+       
+    </script>
+</body>
+</html>

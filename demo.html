@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProWeb - Complete HTML & CSS Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#4f46e5;
+      --dark:#0f172a;
+      --light:#f8fafc;
+      --gray:#64748b;
+      --card:#ffffff;
+    }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:#fff;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      z-index:1000;
+    }
+
+    .navbar{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:15px 20px;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+      color:var(--primary);
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--dark);
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:var(--primary);
+    }
+
+   
+    </style>
+    </head>
+    <body>
+        <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <div class="logo">ProWeb</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    </header>
+    </body>

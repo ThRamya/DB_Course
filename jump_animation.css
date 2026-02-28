@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #cceeff;
+}
+
+/* Sprite container */
+.sprite {
+  width: 220px;          /* width of ONE frame */
+  height: 300px;         /* height of image */
+  background-image: url("image/Sevenboys.jpg");
+  background-repeat: no-repeat;
+  background-size: 1100px 300px;  /* 5 frames × 220px = 1100px */
+
+  animation: jump 1s steps(5) infinite;
+}
+
+/* Animation */
+@keyframes jump {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1100px 0;
+  }
+}

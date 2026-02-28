@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Types of balls</h3>
+    <ul id="list"></ul>
+    <h2>Varieties of fruits</h2>
+    <ul id="fruitlist"></ul>
+    <h3>Student Tables</h3>
+    <table id="table1" border="1">
+    </table>
+    <h2>Fruits</h2>
+    <table id="shopping" border="1"></table>
+    <script>
+        //using forEach() for make a list
+        let balls = ["volleyball", "football", "throwball"];
+        let ball_list = "";
+        balls.forEach(function (ball) {
+            ball_list += "<li>" + ball + "</li>";
+        });
+        document.getElementById("list").innerHTML = ball_list;
+        // using map() for make a list 
+        let fruits = ["apple", "mango", "orange"];
+        let res = fruits.map(function (fruit) {
+            return "<li>" + fruit + "</li>";
+        });
+        document.getElementById("fruitlist").innerHTML = res.join("");
+        //using forEach() to  create a table
+        let students = [{ name: "Ramya", age: 26, course: "DB" }, { name: "Radhika", age: 31, course: "CS" }]
+        let tabledata = "";
+        tabledata += "<tr>";
+        tabledata += "<th>Name</th>";
+        tabledata += "<th>Age</th>";
+        tabledata += "<th>Course</th>";
+        tabledata += "</tr>";
+        students.forEach(function (student) {
+            tabledata += "<tr>"
+            tabledata += "<td>" + student.name + "</td>";
+            tabledata += "<td>" + student.age + "</td>";
+            tabledata += "<td>" + student.course + "</td>";
+            tabledata += "</tr>"
+        })
+        document.getElementById("table1").innerHTML = tabledata;
+        //using map() to create a table
+        let buy = [{ fruit_name: "Orange", rate: 100 }, { fruit_name: "Apple", rate: 150 }]
+        let header =` <tr>
+                        <th>Fruits</th>
+                        <th>Rate</th>
+                    </tr>`;
+                   
+        let brought = buy.map(function (sell) {
+            return `<tr>
+                        <td>${sell.fruit_name}</td> 
+                        <td>${sell.rate}</td>
+                    </tr>`; // temporal liter expression
+        })
+        document.getElementById("shopping").innerHTML=header+brought.join("");
+      
+
+
+// return "<tr>" +
+//        "<td>" + sell.fruit_name + "</td>" +
+//        "<td>" + sell.rate + "</td>" +
+//        "</tr>";
+
+    </script>
+</body>
+
+</html>

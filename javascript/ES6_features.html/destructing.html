@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**destructing**/
+        let array1=[45,56,78,90];
+        let[,,var2,var3]=array1;
+        console.log(typeof(var1));
+          console.log(var2);
+            console.log(var3);
+            /**object destructing**/
+            let obj ={roll:10,fname:"ramya"}
+            let{roll,fname}=obj;
+            console.log(roll);
+            console.log(fname);
+/**nested_object**/
+            let obj1={rollno:67,
+                age:26,
+                fullname:{firstname:"ramya" ,
+                lname:"chandra"}};
+            let{rollno,age,fullname:{firstname=value,lname=value}}=obj1;
+              console.log() ;
+              /**object enhancement->variable to object**/
+              var st_roll=57;
+              var age1=26;
+           
+              let obj2={rollno,age1,};
+              console.log(obj2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let array1=[45,"ramya",true,null]
+        console.log(array1);
+        array1[1]="priya";// array1["1"] or array1[1]-->both are sames
+        console.log(array1[0]);
+        console.log(array1[1]);
+        console.log(array1[2]);
+        console.log(array1[3]);
+        document.writeln(array1[1]);
+        for(let i=0;i<array1.length;i++){
+            console.log(array1[i]);
+            document.writeln(array1[i]);
+        }
+        /*another method to use array*/
+        let array2=new Array("chandra",49,true);
+        console.log(array2);
+        for(let i=0;i<array2.length;i++){
+            console.log(array2[i]);
+        }
+    </script>
+</head>
+<body>
+    <p class="demo">1st para</p>
+     <p class="demo"></p>
+    <p id="demoid1"></p>
+    <p id="demoid2"></p>
+    <script>
+        document.getElementsByClassName("demo")[0].innerText=array1;//demo[]
+        document.getElementsByClassName("demo")[1].innerText=array2;//demo[]
+         document.getElementById("demoid2").innerText=array2;
+         document.getElementById("demoid1").innerText=array1;
+         
+    </script>
+</body>
+</html>
