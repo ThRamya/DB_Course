@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>John</h1>
+        <p id="para1">Radhika</p>
+    </div>
+    <script>
+        //prepend(),append(),insertAdjacentElement() these are using for positioning but if we use this insertAdjacentElement()  we must create element first,this method accepts only a DOM elements(Node), not a HTML string.
+        var div=document.querySelector("div");
+        div.append("Hello");
+        div.prepend("Ramya");
+        var h1=document.createElement("h1");
+        h1.textContent="Hai Hi!!"
+        //div.insertAdjacentElement("beforebegin",h1);
+        //div.insertAdjacentElement("afterend",h1);
+        //div.insertAdjacentElement("beforeend",h1);//it likes appends
+        div.insertAdjacentElement("afterbegin",h1);//it likes prepends()
+        
+        var para=document.getElementById("para1");
+        //para1.remove();
+    </script>
+</body>
+</html>

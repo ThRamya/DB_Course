@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //xhr.open() is part of XHR and only prepares the request. You still need xhr.send() and event handlers.
+        //fetch() combines preparing + sending the request in one call, and returns a Promise, making it simpler.
+        //fetch() → calls API → API talks to server → server sends data → fetch receives data
+        //Server → stores data
+        //API → gives access to that data
+        //fetch() → calls the API
+
+        //API lives inside a server
+        //Server can exist without API.
+        //But API cannot exist without a server.
+
+        //response.json() returns a Promise that resolves to a JavaScript object.
+
+        //Yes, fetch() is the API call
+        //URL is the API endpoint
+        //.then() is used to handle the response
+
+        //1. GET → Read data
+        //Used to get data from server
+        fetch("https://jsonplaceholder.typicode.com/users/1")
+        .then(function(response){
+            return response.json();// convert JSON text → JS object
+        })
+        .then(function(received_data){
+            console.log(received_data.name);//GET = Read data
+
+        });
+        //POST → Create new data/record
+        //Used to send new data to server
+
+        fetch("https://jsonplaceholder.typicode.com/users",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                name:"Ramya",
+                email:"ramyachandra.nec@gmail.com"
+            })
+        })
+        .then(function(response){
+            return response.json(); //convert JSON text → JS object
+        })
+        .then(function(data){
+            console.log(data);//POST = Create new record
+        });
+        //PUT → Update existing data
+        //Used to update full data
+         fetch("https://jsonplaceholder.typicode.com/users/1",{
+            method:"PUT",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify({
+                name:"Ramya Updated",
+                email:"ramyachandra.nec@gmail.com"
+            })
+         })
+         .then(function(response){
+            return response.json();
+         })
+         .then(function(receiveddata){
+            console.log(receiveddata);//PUT = Update existing record
+         });
+         //DELETE → Remove data
+         //Used to delete data
+         fetch("https://jsonplaceholder.typicode.com/users/1",{
+            method:"DELETE",
+         })
+         .then(function(respnse){
+            console.log("Deleted Successfully");//DELETE = Remove record
+         });
+         fetch("https://jsonplaceholder.typicode.com/users/1",{
+            method:"PATCH",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify({
+                name:"Anu"
+            })
+         })
+         .then(function(response){
+            return response.json();
+         })
+         .then(function(data_received){
+            console.log(data_received);
+         });
+         //Same using async/await (easy and modern)
+         async function CreateUser(){
+            var response=await fetch("https://jsonplaceholder.typicode.com/users",{
+                method:"POST",
+                headers:{"content-type":"application/json"},
+                body:JSON.stringify({
+                    name:"Ramya"
+                })
+            });
+            var data=await response.json();
+            console.log(data);
+         }
+         CreateUser();
+    </script>
+</body>
+</html>

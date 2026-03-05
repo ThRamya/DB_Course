@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch CRUD Example</title>
+</head>
+<body>
+
+<h2>User CRUD Example</h2>
+
+<input type="text" id="name" placeholder="Enter name">
+<input type="text" id="email" placeholder="Enter email">
+
+<br><br>
+
+<button onclick="addUser()">ADD</button>
+<button onclick="getUsers()">VIEW</button>
+<button onclick="updateUser()">UPDATE</button>
+<button onclick="deleteUser()">DELETE</button>
+
+<h3>Output:</h3>
+<div id="output"></div>
+
+<script>
+
+// GET
+function getUsers(){
+
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(users){
+
+        var text = "";
+
+        users.forEach(function(user){
+            text += user.id + " " + user.name + "<br>";
+        });
+
+        document.getElementById("output").innerHTML = text;
+
+    });
+
+}
+
+
+// POST
+function addUser(){
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+
+    fetch("https://jsonplaceholder.typicode.com/users", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            name: name,
+            email: email
+        })
+
+    })
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        alert("User Added: " + data.name);
+    });
+
+}
+
+
+// PUT
+function updateUser(){
+
+    fetch("https://jsonplaceholder.typicode.com/users/1", {
+
+        method: "PUT",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            name: "Updated Name",
+            email: "updated@email.com"
+        })
+
+    })
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        alert("User Updated");
+    });
+
+}
+
+
+// DELETE
+function deleteUser(){
+
+    fetch("https://jsonplaceholder.typicode.com/users/1", {
+
+        method: "DELETE"
+
+    })
+    .then(function(){
+        alert("User Deleted");
+    });
+
+}
+
+</script>
+
+</body>
+</html>

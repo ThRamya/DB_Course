@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    num1:<input type="number" id="num1">
+    num2:<input type="number" id="num2">
+    <h1 id="title">Hello World</h1>
+    <button id="btn">Change</button>
+    <button id="total">Add</button>
+    <p id="result">Result</p>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            var a = document.getElementById("title");
+            console.log(a.textContent);
+            a.textContent = "Bye World";
+        })
+        document.getElementById("total").addEventListener("click", function () {
+            a = document.getElementById("num1").value;
+            b = document.getElementById("num2").value;
+            c = Number(a) + Number(b);
+            document.getElementById("result").innerText = c;
+
+
+        })
+        var c = Math.random();//normally its start and end from 0 to 9 ,console.log(c*10);   
+        console.log(Math.floor(c * 10));//it give single digit value
+        console.log(Math.floor(c * 10 + 1));// if want to start and end from 1 to 10 you need to +1 then it generate from 1 to 10
+
+
+        var d = Math.floor(1.99);
+        console.log(d);
+
+
+    </script>
+</body>
+
+</html>
