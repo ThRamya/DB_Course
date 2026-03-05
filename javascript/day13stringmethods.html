@@ -9,7 +9,7 @@
         // console.log(a.length);
         // console.log(a);
         // let b=a.substring(4,7); 
-        // console.log(b);
+        // console.log(b); 
         // //need to diff btw substring and slices 
         // //slice = smart (supports negative),substring = simple (no negative)
         // //substring is polite (it swaps),slice is strict (no swap)
@@ -50,8 +50,16 @@
          console.log(p.indexOf("a"));
          console.log(p.indexOf("a", p.indexOf("a") + 1));//to find a 2nd "a" in p)
       
+       let str="Hello World"
+       console.log("substring:",str.substring(-5)); //negative indices doesn't support here so it take as 0 th index.
+       
+       //Normally, substring(start, end) expects start <= end.
+       let str1="Hello World"
+       console.log("swap:",str.substring(8,3));
 
-
+       let str2="Hello World";
+       console.log("neg in substr:",str.substr(-5,5)); 
+       //here -5 is there it is subtracting Hello World.length is 11 so 11-5-6 so str.substr(6,5);so World is op
 
 
 

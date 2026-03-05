@@ -12,7 +12,7 @@ $b="ramya";
 
 <?php
 echo "hello"."<br>";
-print("hii"."<br>");
+print("hii"."<br>"); 
 $a=89;
 $b="ramya";
 echo "value:",$a."<br>";

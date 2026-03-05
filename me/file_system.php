@@ -18,7 +18,7 @@
 // else{
 //     echo "not there";
 // }
-$file=fopen("text.txt","a");
+$file=fopen("text.txt","a"); 
 //filename,r-read only,w--write only,x-new file,r+ =>read and write, a=>append
 fwrite($file,"hai ,Ramya");
 fclose($file);

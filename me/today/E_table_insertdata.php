@@ -12,7 +12,7 @@ for($i=0;$i<count($c_name);$i++)
     {
         echo "<tr>";
         echo "<td>".$c_name[$i]."</td>";
-        echo "<td>".$prod[$i]."</td>";
+        echo "<td>".$prod[$i]."</td>"; 
         echo "<td>".$rates[$i]."</td>";
         echo "</tr>";
     }

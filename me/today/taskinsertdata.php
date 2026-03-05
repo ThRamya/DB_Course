@@ -1,12 +1,14 @@
 <?php
 include("db.php");
-$data=json_decode(file_get_contents("php://input"),true);//return associative array
-// JSON string (text format) data inside this :"php://input"
+$data=json_decode(file_get_contents("php://input"));//false=obj->key1,obj->key2
+//$data=json_decode(file_get_contents("php://input")); it return object
+// js file inside this :"php://input"
 //file_get_contents :used to get a data 
 //json_decode : convert the json string to associative array
-$Customername=$data["c"];
-$Product=$data["p"];
-$Rate=$data["r"];
+
+$Customername=$data->Customername;
+$Product=$data->Product;
+$Rate=$data->Rate;
 
 
 

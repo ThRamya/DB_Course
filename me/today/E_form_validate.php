@@ -9,7 +9,7 @@
     <link rel="icon" href="../../image/favicon.png" type="image/png">
 </head>
 
-<body>
+<body> 
      <?php
 //         $id=$_GET["id"];
 //         echo $id;
@@ -150,7 +150,21 @@
                         Error5.textContent="";
                     }
                 });
+          /*   fetch("E_insert_data.php",{
+                method:"post";
+                headers:{"content-type":"application/x-www-form-urlencoded"
+                //"content-type":"text/plain"
+                },
+                body:"welcome";
 
+             })*/
+            fetch("E_insert_data.php"),{
+                method:"post";
+                headers:{"content-type":"application/x-www-form-urlencoded"
+                },
+                body:"first_name=ramya&mobile_no=8248375321";
+
+            }
 
 
 

@@ -7,7 +7,7 @@ $d=[1,2,3];
 $e=null;
 $f="123"; 
 $g=new stdClass();
-$h=5.5;
+$h=5.5; 
 $i="ramya";
 //null, doubke not show if not it does'nt show result ask to sir
 echo is_bool($a)? "bool<br>":"not bool<br>";

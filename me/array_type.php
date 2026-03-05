@@ -13,7 +13,7 @@ $arr = [
 $key = array_search("Mango", $arr);
 
 echo $key;
-?>
+?> 
 ?>
 #sir notes for array method:-
 

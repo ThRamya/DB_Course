@@ -13,7 +13,7 @@
             <th>Product</th>
             <th>Rate</th>
         </tr>
-
+ 
         <tr>
             <td>
                 <input type="text" name="customer_name[]">
