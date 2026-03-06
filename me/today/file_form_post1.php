@@ -1,6 +1,6 @@
 <?php
 $customername = $_POST["fname"];
-$product = $_POST["lname"];
+$product = $_POST["lname"];  
 $rate = $_POST["pwd"];
 
 $file_name=$_FILES["file"]["name"];
