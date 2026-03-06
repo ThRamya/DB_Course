@@ -25,12 +25,16 @@
             ball_list += "<li>" + ball + "</li>";
         });
         document.getElementById("list").innerHTML = ball_list;
+
+
         // using map() for make a list 
         let fruits = ["apple", "mango", "orange"];
         let res = fruits.map(function (fruit) {
             return "<li>" + fruit + "</li>";
         });
         document.getElementById("fruitlist").innerHTML = res.join("");
+
+        
         //using forEach() to  create a table
         let students = [{ name: "Ramya", age: 26, course: "DB" }, { name: "Radhika", age: 31, course: "CS" }]
         let tabledata = "";

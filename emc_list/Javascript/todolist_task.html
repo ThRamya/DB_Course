@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <button id="btn">Add</button>
+    <ul id="ul1">
+        <li>Hello
+            <button id="del">delete</button>
+        </li>
+    </ul>
+
+    <script>
+        //add a value in list
+        document.getElementById("btn").addEventListener("click",function(){
+                var inp=document.getElementById("input1").value;
+                var li1=document.createElement("li");
+
+                li1.innerHTML=inp+"<button class='del1'>deletee</button>";//add button tag 
+                             
+                var ul=document.getElementById("ul1");
+                ul1.append(li1);
+         })
+
+         //remove a value from list
+         document.getElementById("del").addEventListener("click",function(e)
+        {
+           e.target.parentElement.remove(); 
+            
+        })
+
+        //remove value from list using another del button with class attributes 
+        document.getElementById("ul1").addEventListener("click",function(e)
+        {
+        if(e.target.classList.contains("del1")){
+           e.target.parentElement.remove(); 
+        }
+            
+        })
+    </script>
+</body>
+
+
+</html>

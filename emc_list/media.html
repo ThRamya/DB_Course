@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /****media query max-width shoul start from order highest to lowest like 900 ,800,700,300..*****/
+        /**min-width lowset to highest**/
+        h1{
+            color:pink;
+        }
+        @media screen and (min-width:700px){
+            h1{
+                color:orange;
+            }
+        }
+         @media screen and (min-width:900px){
+            h1{
+                color:green;
+            }
+        }
+       
+        /**max-width highest to lowest**/
+        h1{color:black}
+        @media screen and (max-width:800px){
+            h1{
+                color:yellow;
+            }
+        }
+        @media screen and (max-width:700px){
+            h1{color:blue;}
+            
+        }
+       @media screen and (max-width:400px){
+        h1{
+            color:red;
+        }
+       }
+       /**print orientation landscape and portrait**/
+        h1{
+            color:red;
+        }
+       @media print{
+        h1{
+        color:blue;
+       }}
+       @media print and (orientation:landscape){
+        h1{
+            color:green;
+        }
+       }
+       @media print and (orientation:portrait){
+        h1{
+            color:orange;
+        }
+       }
+       @media screen and (max-width:50px){
+        h1{
+            color:blue;
+        }
+       }
+       @media screen and (min-width:650px){
+        h1{
+            color:chartreuse;
+        }
+       }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+</body>
+</html>
